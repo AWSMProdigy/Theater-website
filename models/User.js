@@ -35,6 +35,18 @@ User.init(
         len: [6],
       },
     },
+    moviesToWatch: {
+      type: DataTypes.ARRAY,
+      allowNull: false,
+    },
+    friends: {
+      type: DataTypes.ARRAY,
+      allowNull: false,
+    },
+    myTheater: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     hooks: {

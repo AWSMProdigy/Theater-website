@@ -1,5 +1,6 @@
 const Friend = require('./Friend');
 const User = require('./User');
+
 const UserFriends = require('./UserFriends');
 
 Friend.belongsToMany(User, {
@@ -27,4 +28,3 @@ module.exports = {
   User,
   UserFriends
 };
-
