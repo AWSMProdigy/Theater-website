@@ -30,7 +30,12 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id, {
-      include: [{ model: Friend, through: UserFriends, as: 'list_friends' }]
+      include: [{ model: Friend, through: {
+        where:{
+          status: 2
+        }
+      }, as: 'list_friends'
+      }],
     });
 
     if (!userData) {
