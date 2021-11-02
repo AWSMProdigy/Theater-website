@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-
 class Movie extends Model {}
 
 Movie.init(
@@ -35,5 +34,4 @@ Movie.init(
     modelName: 'movie',
   }
 );
-
 module.exports = Movie;
