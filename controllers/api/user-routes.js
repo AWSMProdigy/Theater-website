@@ -42,7 +42,7 @@ router.get('/:id', async (req, res) => {
 router.get('/friend/:id', async (req, res) => {
   try {
     const userData = await Friend.findByPk(req.params.id, {
-      include: [{ model: User, through: UserFriends, as: 'list_friends' }]
+      include: [{ model: User, through: UserFriends, as: 'Friends_list' }]
     });
 
     if (!userData) {
