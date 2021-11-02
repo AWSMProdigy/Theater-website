@@ -1,24 +1,30 @@
+const Friend = require('./Friend');
 const User = require('./User');
-const Movie = require('./Movie');
 
-User.belongsToMany(Movie, {
+const UserFriends = require('./UserFriends');
+
+Friend.belongsToMany(User, {
   // Define the third table needed to store the foreign keys
   through: {
-    model: Trip,
+    model: UserFriends,
     unique: false
   },
   // Define an alias for when data is retrieved
-  as: 'planned_trips'
+  as: 'Friends_list'
 });
 
-Movie.belongsToMany(User, {
+User.belongsToMany(Friend, {
   // Define the third table needed to store the foreign keys
   through: {
-    model: Trip,
+    model: UserFriends,
     unique: false
   },
   // Define an alias for when data is retrieved
-  as: 'movie_users'
+  as: 'list_friends'
 });
 
-module.exports = { User, Movie, Trip };
+module.exports = {
+  Friend,
+  User,
+  UserFriends
+};
