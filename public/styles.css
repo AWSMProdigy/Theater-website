@@ -1,0 +1,72 @@
+.nav .nav-item .nav-link {
+    color: white;
+}
+
+.nav .nav-item .nav-link:hover {
+    color: aqua;
+    transition: 0.3s;
+}
+
+.nav .nav-item .nav-link:focus {
+    color: aqua;
+    font-weight: bolder;
+}
+
+/* Movie Carousel */
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-control-prev-icon {
+    background-image: url()
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* large - display 6 */
+@media (min-width: 992px) {
+    
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(50%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-50%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+.movie-img {
+	height:200px;
+    width: 150px;
+    background-color: aqua;
+    overflow: hidden;
+	object-fit: fill;
+}
+
+.movie-title {
+    margin-top: 10px;
+    border-radius: 30px;
+	height: 40px; 
+    width: 150px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.movie-title > p {
+    text-align: center !important;
+}

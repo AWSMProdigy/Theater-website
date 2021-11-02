@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Homepage</title>
+  </head>
+
+  <body>
+    <div class="nav-wrapper">
+        <nav class="nav bg-dark p-3 justify-content-end">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">My Theaters</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Now Showing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Login</a>
+                </li>
+              </ul>
+        </nav>
+    </div>
+    
+    <div class="container col-12 text-center">
+            <div class="row col-11">
+                <div id="movieCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="col-lg-2">
+                                <div class="movie-card m-4">
+                                    <div class="movie-img">
+                                        <a href="#"><img src="../assets/movie-carousel/insideout.png" class="img-fluid"></a>
+                                    </div>
+                                    <div class="movie-title">
+                                        <a href="#">
+                                            <p class="text-white text-sm-center font-small flex-center align-middle">Get Tickets</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-lg-2">
+                                <div class="movie-card m-4">
+                                    <div class="movie-img">
+                                        <a href="#"><img src="../assets/movie-carousel/joker.png" class="img-fluid"></a>
+                                    </div>
+                                    <div class="movie-title">
+                                        <a href="#">
+                                            <p class="text-white text-sm-center font-small flex-center">Get Tickets</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-lg-2">
+                                <div class="movie-card m-4">
+                                    <div class="movie-img">
+                                        <a href="#"><img src="../assets/movie-carousel/shangchi.jpg" class="img-fluid"></a>
+                                    </div>
+                                    <div class="movie-title">
+                                        <a href="#">
+                                            <p class="text-white text-sm-center font-small flex-center">Get Tickets</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-2">
+                                <div class="movie-card m-4">
+                                    <div class="movie-img">
+                                        <a href="#"><img src="../assets/movie-carousel/tombraider.jpg" class="img-fluid"></a>
+                                    </div>
+                                    <div class="movie-title">
+                                        <a href="#">
+                                            <p class="text-white text-center">Get Tickets</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-lg-2">
+                                <div class="movie-card m-4">
+                                    <div class="movie-img">
+                                        <a href="#"><img src="../assets/movie-carousel/us.jpg" class="img-fluid"></a>
+                                    </div>
+                                    <div class="movie-title">
+                                        <a href="#">
+                                            <p class="text-white text-sm-center font-small flex-center align-middle">Get Tickets</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev w-auto" href="#movieCarousel" role="button" data-slide="prev">
+                        <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                          </svg></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next w-auto" href="#movieCarousel" role="button" data-slide="next">
+                        <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                          </svg></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
