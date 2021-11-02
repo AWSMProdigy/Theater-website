@@ -10,9 +10,14 @@ router.post('/', async (req, res) => {
       password: req.body.password,
     });
 
+    const newFriend = await Friend.create({
+      user: req.body.username
+    })
+
     // Set up sessions with a 'loggedIn' variable set to `true`
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user_id = dbUserData.id;
 
       res.status(200).json(dbUserData);
     });
@@ -25,7 +30,12 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id, {
-      include: [{ model: Friend, through: UserFriends, as: 'list_friends' }]
+      include: [{ model: Friend, through: {
+        where:{
+          status: 2
+        }
+      }, as: 'list_friends'
+      }],
     });
 
     if (!userData) {
@@ -38,6 +48,7 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 router.get('/friend/:id', async (req, res) => {
   try {
@@ -84,6 +95,7 @@ router.post('/login', async (req, res) => {
     // Once the user successfully logs in, set up the sessions variable 'loggedIn'
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user_id = dbUserData.id;
 
       res
         .status(200)

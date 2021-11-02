@@ -17,7 +17,7 @@ const seedDatabase = async () => {
     const { id: someUser_id } = users[0];
     const { id: someFriend_id } = friends[i+1];
 
-    // Create a new trip with random `trip_budget` and `traveller_amount` values, but with ids selected above
+    // Create a new friendship
     await UserFriends.create({
       user_id: someUser_id,
       friend_id: someFriend_id,
