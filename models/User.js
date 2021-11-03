@@ -35,6 +35,11 @@ User.init(
         len: [6],
       },
     },
+    myTheater: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "ReelCinema"
+    },
   },
   {
     hooks: {

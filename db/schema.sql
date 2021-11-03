@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS theater_db;
+CREATE DATABASE theater_db;
