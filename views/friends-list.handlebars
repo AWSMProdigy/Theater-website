@@ -1,0 +1,43 @@
+<div class="container">
+    <div id="content" class="content p-0">
+        <div class="profile-header">
+            <div class="profile-header-cover"></div>
+            <div class="profile-header-content">
+                <div class="profile-header-img mb-4">
+                    <img src="/Theater-website/public/img/dribbble_angry_4x.gif" class="mb-4" alt="" />
+                </div>
+
+                <div class="profile-header-info">
+                    <h4 class="m-t-sm">Beau Chewning</h4>
+                    <a href="#" class="btn btn-xs btn-primary mb-2">Edit Profile</a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="profile-container">
+            <div class="row row-space-20">
+                <div class="col-md-8">
+                    <div class="tab-content p-0">
+
+                        <div class="tab-pane fade active show" id="profile-friends">
+                            <div class="m-b-10"><b>Friend List (3)</b></div>
+
+                            <ul class="friend-list clearfix">
+                                {{#each friends as |friend|}}
+                                {{> friend-details}}
+                                {{/each}}
+                        </div>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</div>
