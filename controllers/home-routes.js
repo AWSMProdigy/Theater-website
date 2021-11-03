@@ -4,12 +4,18 @@ const {  User } = require('../models');
 //Sends user to homepage
 router.get('/', async (req, res) => {
     try{
+      if(req.session.user_id){
         const myUser = await User.findByPk(req.session.user_id);
         res.render('homepage', {
             loggedIn: req.session.loggedIn,
             user_id: req.session.user_id,
             userName: myUser.username
         });
+      } else {
+        res.render('homepage', {
+          loggedIn: false,
+      });
+      }
     }
     catch(err) {
         console.log(err);
