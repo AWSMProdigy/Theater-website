@@ -48,7 +48,7 @@ router.get('/:id', async (req, res) => {
     );
     res.render('friend-details', {
       loggedIn: req.session.loggedIn,
-      user_id = req.session.user_id,
+      user_id: req.session.user_id,
       myUser
     })
     res.status(200).json(userData);
