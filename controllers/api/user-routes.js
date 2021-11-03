@@ -27,6 +27,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//Get user profile of entered user
 router.get('/:id', async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id, {
@@ -42,8 +43,13 @@ router.get('/:id', async (req, res) => {
       res.status(404).json({ message: 'No User found with this id!' });
       return;
     }
+    const myUser = userData.map((posts) =>
+      posts.get({ plain: true })
+    );
     res.render('friend-details', {
-      loggin
+      loggedIn: req.session.loggedIn,
+      user_id = req.session.user_id,
+      myUser
     })
     res.status(200).json(userData);
   }
@@ -52,34 +58,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.session.user_id, {
-      include: [{ model: Friend, through: {
-        where:{
-          status: 2
-        }
-      }, as: 'list_friends'
-      }],
-    });
 
-    if (!userData) {
-      res.status(404).json({ message: 'No User found with this id!' });
-      return;
-    }
-    const friends = userData.map((posts) =>
-      posts.get({ plain: true })
-    );
-    res.render('friend-details', {
-      loggedIn: req.session.loggedIn,
-      user_id: req.session.user_id, 
-      friends
-    });
-  }
-  catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 
 // router.get('/friend/:id', async (req, res) => {
