@@ -119,8 +119,8 @@ router.post('/logout', (req, res) => {
   }
 });
 
-router.post('/friend/:id', (req, res) => {
-  
-})
+// router.post('/friend/:id', (req, res) => {
+
+// })
 
 module.exports = router;

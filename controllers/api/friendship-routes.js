@@ -44,6 +44,7 @@ router.put('/:id', async (req, res) => {
     }
   })
 
+  //Send friend request
 router.post('/:id', async (req, res) => {
 try{
     const someUser_id = req.body.user_id;
@@ -65,6 +66,7 @@ catch (err){
 }
 })
 
+//Delete friend
 router.delete('/:id', async (req, res) => {
     try{
         const deletedFriendship = await Category.destroy({
