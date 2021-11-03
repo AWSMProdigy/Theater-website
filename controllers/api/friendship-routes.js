@@ -44,7 +44,8 @@ router.put('/:id', async (req, res) => {
     }
   })
 
-  //Send friend request
+
+//Send friend request
 router.post('/:id', async (req, res) => {
 try{
     const someUser_id = req.body.user_id;
@@ -65,6 +66,7 @@ catch (err){
     res.status(500).json(err);
 }
 })
+
 
 //Delete friend
 router.delete('/:id', async (req, res) => {
