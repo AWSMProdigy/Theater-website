@@ -13,7 +13,7 @@
 
 <body>
     <div class="body-wrapper">
-        <nav class="nav bg-black p-3 justify-content-between">
+        <nav id="nav-css" class="nav bg-black p-3 justify-content-between">
             <img id="nav-logo" src="../assets/logo-black.png">
             <ul class="nav">
                 <li class="nav-item">
@@ -29,7 +29,7 @@
                   <a class="nav-link" href="#">Login</a>
                 </li>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input id="small-searchBar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn custom-btn my-5 my-sm-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                       </svg></button>
@@ -38,10 +38,10 @@
         </nav>
     
     <div class="container col-12 text-center">
-            <div class="row">
+            <div id="carousel-row" class="row">
                 <div id="movieCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <!-- Insider Out -->
+                        <!-- Inside Out -->
                         <div class="carousel-item active">
                             <div class="col-lg-2">
                                 <div class="movie-card m-4">
@@ -137,11 +137,11 @@
     </div>
     <div class="row">
         <section id="moonlight-monday">
-            <div class="row bg-blue mt-3 p-5">
-                <div class="left col-6">
-                    <img id="moonlight-img" class="col-6 col-sm-1 left no-gutters float-right" src="../assets/homepage-images/moonlight-img.jpeg">
+            <div id="moonlight-row" class="row bg-blue mt-3 p-5">
+                <div class="col-6 homepage-images">
+                    <img id="moonlight-img" class="col-6" src="../assets/homepage-images/moonlight-img.jpeg">
                 </div>
-                <div class="right col-6">
+                <div id="moonlight-section" class="col-6">
                     <h1 class="text-white">Moonlight Mondays</h1>
                     <p class="text-white">2016's biggest film is back at Reel Cinema theaters, but only on Mondays in November!</p>
                     <p class="text-white"><em>Moonlight</em> takes a look at three defining chapters in the life of Chiron, a young black man growing up in Miami.</p>
@@ -151,17 +151,17 @@
         </section>
     </div>
 
-    <div class="row">
+    <div class="row d-flex justify-content-sm-center">
         <section id="anniversary">
-            <div class="row p-5">
-                <div class="left col-6">
-                    <h1 class="text-right">Reel Cinema 10-Year Anniversary Event</h1>
-                    <p class="text-right">We can't believe it's already been ten years as Reel Cinema! As a thank you, we're holding events all month long in November to celebrate! Be sure to check back each week for a new coupon.</p>
-                    <p class="text-right">Anytime from November 1-7, receive a free drink with any small popcorn purchase.</p>
-                    <button class="btn bg-black text-white float-right">Book Your Movie</button>
+            <div id="anniversary-section" class="row p-5">
+                <div id="anniversary-text" class="col-6 col-xs">
+                    <h1 class="text-sm-right">Reel Cinema 10-Year Anniversary Event</h1>
+                    <p class="text-sm-right">We can't believe it's already been ten years as Reel Cinema! As a thank you, we're holding events all month long in November to celebrate! Be sure to check back each week for a new coupon.</p>
+                    <p class="text-sm-right">Anytime from November 1-7, receive a free drink with any small popcorn purchase.</p>
+                    <button class="btn bg-black text-white float-sm-right">Book Your Movie</button>
                 </div>
-                <div class="right col-6">
-                    <img id="moonlight-img" class="col-6 left no-gutters float-right" src="../assets/homepage-images/couple-at-movies.jpg">
+                <div class="right col-6 homepage-images">
+                    <img id="anniversary-img" class="col-6 float-right" src="../assets/homepage-images/couple-at-movies.jpg">
                 </div>
             </div>
         </section>
@@ -173,7 +173,7 @@
         <div class="d-flex flex-column h-100 bg-black">
             <!-- FOOTER -->
             <footer class="w-100 py-4 flex-shrink-0">
-                <div class="container py-4">
+                <div id="footer-section" class="container py-4">
                     <div class="row gy-4 gx-5">
                         <div class="col-lg-4 col-md-6">
                             <img id="footer-logo" src="../assets/logo-black.png">
