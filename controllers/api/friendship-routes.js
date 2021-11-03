@@ -2,9 +2,9 @@ const router = require('express').Router();
 const { UserFriends, User, Friend } = require('../../models');
 
 //Display pending friendships
-router.get('/:id', async (req, res) => {
+router.get('/pending/:id', async (req, res) => {
     try {
-      const userData = await User.findByPk(req.params.id, {
+      const userData = await User.findByPk(req.session.user_id, {
         include: [{ model: Friend, through: {
           where:{
             status: 1
@@ -12,12 +12,16 @@ router.get('/:id', async (req, res) => {
         }, as: 'list_friends'
         }],
       });
-  
-      if (!userData) {
-        res.status(404).json({ message: 'No User found with this id!' });
-        return;
-      }
-      res.status(200).json(userData);
+
+      const pendingFriends = userData.map((post) =>
+      pendingFriends.get({ plain: true })
+    );
+
+    res.render('friend-list', {
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id,
+      pendingFriends
+    });
     }
     catch (err) {
       res.status(500).json(err);
