@@ -1,6 +1,6 @@
 const movie = async () => {
     const response = await fetch('/api/users/movie', {
-      method: 'GET',
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });
   
