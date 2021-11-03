@@ -12,12 +12,12 @@
 </head>
 
 <body>
-    <div class="nav-wrapper">
+    <div class="body-wrapper">
         <nav class="nav bg-black p-3 justify-content-between">
             <img id="nav-logo" src="../assets/logo-black.png">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Friends</a>
+                    <a class="nav-link" href="#">My Friends</a>
                   </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">My Theaters</a>
@@ -30,16 +30,18 @@
                 </li>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn custom-btn my-5 my-sm-0" type="submit">Search</button>
+                    <button class="btn custom-btn my-5 my-sm-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg></button>
                   </form>
               </ul>
         </nav>
-    </div>
     
     <div class="container col-12 text-center">
-            <div class="row col-11">
+            <div class="row">
                 <div id="movieCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
+                        <!-- Insider Out -->
                         <div class="carousel-item active">
                             <div class="col-lg-2">
                                 <div class="movie-card m-4">
@@ -47,13 +49,12 @@
                                         <a href="#"><img src="../assets/movie-carousel/insideout.png" class="img-fluid"></a>
                                     </div>
                                     <div class="movie-title">
-                                        <a href="#">
-                                            <p class="text-white text-sm-center font-small flex-center align-middle">Get Tickets</p>
-                                        </a>
+                                        <button class="btn bg-black text-white">Get Tickets</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Joker -->
                         <div class="carousel-item">
                             <div class="col-lg-2">
                                 <div class="movie-card m-4">
@@ -61,13 +62,12 @@
                                         <a href="#"><img src="../assets/movie-carousel/joker.png" class="img-fluid"></a>
                                     </div>
                                     <div class="movie-title">
-                                        <a href="#">
-                                            <p class="text-white text-sm-center font-small flex-center">Get Tickets</p>
-                                        </a>
+                                        <button class="btn bg-black text-white">Get Tickets</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Shang Chi -->
                         <div class="carousel-item">
                             <div class="col-lg-2">
                                 <div class="movie-card m-4">
@@ -75,13 +75,12 @@
                                         <a href="#"><img src="../assets/movie-carousel/shangchi.png" class="img-fluid"></a>
                                     </div>
                                     <div class="movie-title">
-                                        <a href="#">
-                                            <p class="text-white text-sm-center font-small flex-center">Get Tickets</p>
-                                        </a>
+                                        <button class="btn bg-black text-white">Get Tickets</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Tomb Raider -->
                         <div class="carousel-item">
                             <div class="col-2">
                                 <div class="movie-card m-4">
@@ -89,13 +88,12 @@
                                         <a href="#"><img src="../assets/movie-carousel/tombraider.png" class="img-fluid"></a>
                                     </div>
                                     <div class="movie-title">
-                                        <a href="#">
-                                            <p class="text-white text-center">Get Tickets</p>
-                                        </a>
+                                        <button class="btn bg-black text-white">Get Tickets</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Moonlight -->
                         <div class="carousel-item">
                             <div class="col-lg-2">
                                 <div class="movie-card m-4">
@@ -103,13 +101,12 @@
                                         <a href="#"><img src="../assets/movie-carousel/moonlight.png" class="img-fluid"></a>
                                     </div>
                                     <div class="movie-title">
-                                        <a href="#">
-                                            <p class="text-white text-sm-center font-small flex-center align-middle">Get Tickets</p>
-                                        </a>
+                                        <button class="btn bg-black text-white">Get Tickets</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Spider-Man -->
                         <div class="carousel-item">
                             <div class="col-lg-2">
                                 <div class="movie-card m-4">
@@ -117,9 +114,7 @@
                                         <a href="#"><img src="../assets/movie-carousel/spider-man.png" class="img-fluid"></a>
                                     </div>
                                     <div class="movie-title">
-                                        <a href="#">
-                                            <p class="text-white text-sm-center font-small flex-center align-middle">Get Tickets</p>
-                                        </a>
+                                        <button class="btn bg-black text-white">Get Tickets</button>
                                     </div>
                                 </div>
                             </div>
@@ -140,34 +135,39 @@
                 </div>
             </div>
     </div>
+    <div class="row">
+        <section id="moonlight-monday">
+            <div class="row bg-blue mt-3 p-5">
+                <div class="left col-6">
+                    <img id="moonlight-img" class="col-6 col-sm-1 left no-gutters float-right" src="../assets/homepage-images/moonlight-img.jpeg">
+                </div>
+                <div class="right col-6">
+                    <h1 class="text-white">Moonlight Mondays</h1>
+                    <p class="text-white">2016's biggest film is back at Reel Cinema theaters, but only on Mondays in November!</p>
+                    <p class="text-white"><em>Moonlight</em> takes a look at three defining chapters in the life of Chiron, a young black man growing up in Miami.</p>
+                    <button class="btn bg-light">Get Your Tickets</button>
+                </div>
+            </div>
+        </section>
+    </div>
 
-    <section id="moonlight-monday">
-        <div class="row bg-blue mt-3 p-5">
-            <div class="left col-6">
-                <img id="moonlight-img" class="col-6 left no-gutters float-right" src="../assets/homepage-images/moonlight-img.jpeg">
+    <div class="row">
+        <section id="anniversary">
+            <div class="row p-5">
+                <div class="left col-6">
+                    <h1 class="text-right">Reel Cinema 10-Year Anniversary Event</h1>
+                    <p class="text-right">We can't believe it's already been ten years as Reel Cinema! As a thank you, we're holding events all month long in November to celebrate! Be sure to check back each week for a new coupon.</p>
+                    <p class="text-right">Anytime from November 1-7, receive a free drink with any small popcorn purchase.</p>
+                    <button class="btn bg-black text-white float-right">Book Your Movie</button>
+                </div>
+                <div class="right col-6">
+                    <img id="moonlight-img" class="col-6 left no-gutters float-right" src="../assets/homepage-images/couple-at-movies.jpg">
+                </div>
             </div>
-            <div class="right col-6">
-                <h1 class="text-white">Moonlight Mondays</h1>
-                <p class="text-white">2016's biggest film is back at Reel Cinema theaters, but only on Mondays in November!</p>
-                <p class="text-white"><em>Moonlight</em> takes a look at three defining chapters in the life of Chiron, a young black man growing up in Miami.</p>
-                <button class="btn bg-light">Get Your Tickets</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="anniversary">
-        <div class="row p-5">
-            <div class="left col-6">
-                <h1 class="text-right">Reel Cinema 10-Year Anniversary Event</h1>
-                <p class="text-right">We can't believe it's already been ten years as Reel Cinema! As a thank you, we're holding events all month long in November to celebrate! Be sure to check back each week for a new coupon.</p>
-                <p class="text-right">Anytime from November 1-7, receive a free drink with any small popcorn purchase.</p>
-                <button class="btn bg-black text-white float-right">Book Your Movie</button>
-            </div>
-            <div class="right col-6">
-                <img id="moonlight-img" class="col-6 left no-gutters float-right" src="../assets/homepage-images/couple-at-movies.jpg">
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
+    </div>
+        
 
     <section class="footer">
         <div class="d-flex flex-column h-100 bg-black">
@@ -184,11 +184,11 @@
                             <ul class="list-unstyled text-muted custom-links">
                                 <li><a href="#">Login</a></li>
                                 <li><a href="#">My Theaters</a></li>
-                                <li><a href="#">Friends</a></li>
+                                <li><a href="#">My Friends</a></li>
                                 <li><a href="#">Now Showing</a></li>
                             </ul>
                         </div>
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 col-1-xs">
                             <h5 class="text-white mb-3">Newsletter</h5>
                             <p class="small text-muted">Want to stay updated on everything Reel Cinema is doing? Insert your email below to join our newsletter mailing list!</p>
                             <form action="#">
