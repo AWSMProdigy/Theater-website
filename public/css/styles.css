@@ -50,7 +50,11 @@ html,body
     width: 100px;
     height: 100px;
 }
-
+/* .footer{
+    bottom:0;
+    position: absolute;
+    width: 100%;
+} */
 .custom-color {
     background-color: #44B4FF;
 }

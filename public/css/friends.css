@@ -1,6 +1,7 @@
 body{
     background: #eaeaea;
     margin-top:20px;
+    height: 100% !important;
 }
 
 .friend-list,
