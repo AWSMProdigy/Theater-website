@@ -1,4 +1,5 @@
 <h1 align="center">Reel Cinema</h1>
+![image](https://user-images.githubusercontent.com/89664909/140333702-8e7828ee-cb98-4309-98cc-226dd642e159.png)
 
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
