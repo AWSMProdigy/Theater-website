@@ -10,6 +10,9 @@ router.post('/', async (req, res) => {
       rating: req.body.rating,
       showtime: req.body.showtime
     });
+    if(dbMovieData){
+      res.status(200).json(dbMovieData);
+    }
   }
   catch (err) {
     console.log(err);

@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AWSMProdigy/Tech-Blog.git"
+    "url": "git+https://github.com/AWSMProdigy/Theater-website.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AWSMProdigy/Tech-Blog/issues"
+    "url": "https://github.com/AWSMProdigy/Theater-website/issues"
   },
-  "homepage": "https://github.com/AWSMProdigy/Tech-Blog#readme",
+  "homepage": "https://github.com/AWSMProdigy/Theater-website#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
