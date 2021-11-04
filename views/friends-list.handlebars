@@ -32,12 +32,22 @@
                         </div>
 
                         <div class="tab-pane fade active show" id="profile-friends">
-                            <div class="m-b-10"><b>Pending friend List</b></div>
+                            <div class="m-b-10"><b>Pending friend requests</b></div>
                             <ul class="friend-list clearfix">
                                 {{#each myPending.list_friends as |friend|}}
                                 {{> friends-details}}
                                 {{/each}}
                         </div>
+
+                        <div class="tab-pane fade active show" id="profile-friends">
+                            <div class="m-b-10"><b>Incoming friend requests</b></div>
+                            <ul class="friend-list clearfix">
+                                {{#each myPending.list_friends as |friend|}}
+                                {{> friends-details}}
+                                {{/each}}
+                        </div>
+
+
 
 
                         </ul>
