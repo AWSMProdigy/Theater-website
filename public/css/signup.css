@@ -1,14 +1,8 @@
 
 
-body{
-    background-color: #1d1d1d;
-    font-family: 'roboto', sans-serif;
-    margin:0px;
-    padding:0px;
-}
 .signup-box{
     width: 360px;
-    height: 680px;
+    height: 500px;
     margin: auto;
     background-color: rgb(126, 126, 126);
     border-radius: 3px;
@@ -20,11 +14,6 @@ body{
     border-radius: 3px;
     background-color: rgb(126, 126, 126);
     margin-top: 160px;
-}
-
-h1{
-    text-align: center;
-    padding-top: 15px;
 }
 
 
@@ -45,22 +34,25 @@ form input{
     border-radius: 6px;
     outline: none;
 }
-.btn{
+.btn-login{
     width: 300px;
     height: 35px;
     margin-top: 20px;
     border-radius: 6px;
-    background-color: #07eeff;
+    background-color: #44B4FF;
     color: black;
     font-size: 18px; 
     cursor: pointer;
+}
+.btn-login:hover{
+    background-color:#348ac4;
 }
 
 .para-1{
     text-align: center;
     color: #fff;
     font-size: 15px;
-    margin-top: -20
+    margin-top: 10px;
 
 }
 
@@ -77,8 +69,3 @@ form input{
     color:#07eeff;
 }
 
-nav{
-    padding:25px;
-    text-decoration: none;
-    list-style: none;
-}
