@@ -1,7 +1,4 @@
-<h1 align="center">Reel Cinema</h1>
-
 ![image](https://user-images.githubusercontent.com/89664909/140334055-4a84ef22-9881-4ab2-9821-973c79d99aa5.png)
-
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
  A movie theater website with useful tools for organizing your trip to the theater.
