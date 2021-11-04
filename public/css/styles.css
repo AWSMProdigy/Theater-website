@@ -142,7 +142,6 @@ html,body
 	height:200px;
     width: 150px;
     background-color: aqua;
-    overflow: hidden;
 	object-fit: fill;
 }
 
@@ -152,7 +151,6 @@ html,body
 	height: 40px; 
     width: 150px;
     background-color: rgb(24, 24, 24);
-    overflow: hidden;
     text-align: center;
 }
 
