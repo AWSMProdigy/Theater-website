@@ -1,16 +1,14 @@
-*{
-    margin:0px;
-    padding:0px;
 
-}
 
 body{
     background-color: #1d1d1d;
     font-family: 'roboto', sans-serif;
+    margin:0px;
+    padding:0px;
 }
 .signup-box{
     width: 360px;
-    height: 620;
+    height: 680px;
     margin: auto;
     background-color: rgb(126, 126, 126);
     border-radius: 3px;
