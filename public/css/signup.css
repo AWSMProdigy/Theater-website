@@ -17,16 +17,16 @@
 }
 
 
-form{
+.signup-form, .login-form{
     width: 300px;
     margin-left: 20px;
 }
-form label{
+.username-signup, .email-signup, .password-signup, .email-login, .password-login{
     display: flex;
     margin-top: 20px;
     font-size: 18px;
 }
-form input{
+.form-input{
     width: 100%;
     padding: 7px;
     border: none;
