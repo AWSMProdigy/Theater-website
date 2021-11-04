@@ -31,7 +31,7 @@ router.get('/pending/:id', async (req, res) => {
 //Accept/decline friendship
 router.put('/:id', async (req, res) => {
     try{
-      const updatedFriendship = UserFriends.update(req.body, {
+      const updatedFriendship = await UserFriends.update(req.body, {
           where: {
               id: req.params.id
           }
@@ -50,21 +50,30 @@ router.put('/:id', async (req, res) => {
 
 
 //Send friend request
-router.post('/:id', async (req, res) => {
+router.post('/', async (req, res) => {
 try{
-    const someUser_id = req.body.user_id;
+    const someUser_id = req.session.user_id;
     //Check to see that user exists
-    const newFriend = await User.findByPk(req.params.id);
+    const newFriend = await User.findOne({
+      where: {
+        username: req.body.username
+      }
+    });
     if(!newFriend){
     res.status(404).json({ message: "No friend found" });
     }
+    console.log(newFriend.id + "------------------------");
     const newFriendship = await UserFriends.create({
         user_id: someUser_id,
         friend_id: newFriend.id,
         status: 1
     });
     
-    res.status(200).json(newFriendship);
+    req.session.save(() => {
+      loggedIn = true;
+      user_id = req.session.user_id;
+      res.status(200).json(newFriendship);
+    });
 }
 catch (err){
     res.status(500).json(err);
