@@ -30,29 +30,35 @@ router.get('/pending/:id', async (req, res) => {
 
 //Accept friendship
 router.put('/', async (req, res) => {
+  //Find other user to get their id
     try{
       const otherFriend = await User.findOne({
         where: {
           username: req.body.userName
         }
       })
-      const updatedFriendship = await UserFriends.update({
-          status: 2,
-          where: {
-              user_id: req.session.user_id,
-              friend_id: otherFriend.id
-          }
-      })
+      console.log("------ Other friend found ------");
+      //Use current user id with the id of the user of the incoming request to change the status and accept the friend request
+      const updatedFriendship = await UserFriends.update(
+          {status: 2},
+          {where: {
+              user_id: otherFriend.id,
+              friend_id: req.session.user_id
+          }}
+      )
+      console.log("------ Friendship updated ------");
+      //Need to find other user and create a UserFriend relationship for them
       const otherFriendship = await UserFriends.create({
-        user_id: otherFriend.id,
-        friend_id: req.session.user_id,
+        user_id: req.session.user_id,
+        friend_id: otherFriend.id,
         status: 2
       })
+      console.log("------ Other friendship created ------");
       if(updatedFriendship && otherFriendship){
         req.session.save(() => {
           loggedIn = true;
           user_id = req.session.user_id;
-          res.status(200).json(updatedFriendship, otherFriendship);
+          res.status(200).json(updatedFriendship);
         });
       } else{
             res.status(404).json({message:"Friendship does not exist to be accepted"});
@@ -96,15 +102,27 @@ catch (err){
 })
 
 
-//Delete friend
-router.delete('/', async (req, res) => {
+//Delete existing friend
+router.delete('/', async (req, res) => {  
     try{
-        const deletedFriendship = await Category.destroy({
+      const otherFriend = await User.findOne({
+        where: {
+          username: req.body.userName
+        }
+      })
+        const deletedFriendship = await UserFriends.destroy({
             where: {
-                
+                user_id: req.session.user_id,
+                friend_id: otherFriend.id
             }
         })
-        if(deletedFriendship){
+        const otherDeletion = await UserFriends.destroy({
+          where: {
+              user_id: otherFriend.id,
+              friend_id: req.session.user_id
+          }
+        })
+        if(deletedFriendship && otherDeletion){
             res.status(200).json(deletedFriendship);
             return;
         } else {
@@ -115,6 +133,33 @@ router.delete('/', async (req, res) => {
         res.status(500).json(err);
         return;
       }
+})
+
+//Decline incoming friend request
+router.delete('/incoming', async (req, res) => {
+  try{
+    const otherFriend = await User.findOne({
+      where: {
+        username: req.body.userName
+      }
+    })
+    const otherDeletion = await UserFriends.destroy({
+      where: {
+          user_id: otherFriend.id,
+          friend_id: req.session.user_id
+      }
+    })
+    if(otherDeletion){
+        res.status(200).json(otherDeletion);
+        return;
+    } else {
+        res.status(404).json({message:"Friendship does not exist to be deleted"});
+        return;
+    }
+  } catch(err){
+      res.status(500).json(err);
+      return;
+    }
 })
 
 module.exports = router;

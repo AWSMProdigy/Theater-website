@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {  User, Friend } = require('../models');
+const {  User, Friend, UserFriends } = require('../models');
 
 //Sends user to homepage
 router.get('/', async (req, res) => {
@@ -63,18 +63,35 @@ router.get('/profile', async (req, res) => {
         }, as: 'list_friends'
         }],
       });
+
+      const incomingData = await UserFriends.findAll({
+          where:{
+            status: 1,
+            friend_id: req.session.user_id
+          }
+      });
+      
+      var incomingFriends = [];
+      for(let i=0; i < incomingData.length; i++){
+        incomingFriends.push(await User.findByPk(incomingData[i].user_id));
+      }
+
       if (!userData) {
         res.status(404).json({ message: 'No User found with this id!' });
         return;
       }
+
       const myUser = userData.get({ plain: true });
       const myPending = pendingData.get({ plain: true });
-      console.log(myPending);
+
+      console.log(incomingFriends);
+
       res.render('friends-list', {
         loggedIn: req.session.loggedIn,
         user_id: req.session.user_id, 
         myUser, 
-        myPending
+        myPending,
+        incomingFriends
       });
     }
     catch (err) {
