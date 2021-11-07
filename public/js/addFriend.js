@@ -12,6 +12,9 @@ const addFriendHandler = async (event) => {
         if(!response.ok){
             alert("Failed to send friend request");
         }
+        else{
+            alert("Friend request sent");
+        }
     }
     else {
         alert("Friend username cannot be null");

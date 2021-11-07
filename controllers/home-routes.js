@@ -99,6 +99,29 @@ router.get('/profile', async (req, res) => {
     }
   });
 
+  router.get('/profile/:username', async (req, res) => {
+    try {
+      const userData = await User.findOne({
+        where: {
+          username: req.params.username
+        },
+      });
+  
+      if (!userData) {
+        res.status(404).json({ message: 'No User found with this id!' });
+        return;
+      }
+      res.render('friend-profile', {
+        loggedIn: req.session.loggedIn,
+        user_id: req.session.user_id, 
+        userData
+      });
+    }
+    catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 
 
   module.exports = router;

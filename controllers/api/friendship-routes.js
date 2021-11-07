@@ -58,8 +58,8 @@ router.put('/', async (req, res) => {
         req.session.save(() => {
           loggedIn = true;
           user_id = req.session.user_id;
-          res.status(200).json(updatedFriendship);
         });
+        res.redirect(200, '/');
       } else{
             res.status(404).json({message:"Friendship does not exist to be accepted"});
       }
@@ -93,8 +93,8 @@ try{
     req.session.save(() => {
       loggedIn = true;
       user_id = req.session.user_id;
-      res.status(200).json(newFriendship);
     });
+    res.redirect(200, '/');
 }
 catch (err){
     res.status(500).json(err);
@@ -123,7 +123,7 @@ router.delete('/', async (req, res) => {
           }
         })
         if(deletedFriendship && otherDeletion){
-            res.status(200).json(deletedFriendship);
+            res.redirect(200, '/');
             return;
         } else {
             res.status(404).json({message:"Friendship does not exist to be deleted"});
@@ -150,7 +150,7 @@ router.delete('/incoming', async (req, res) => {
       }
     })
     if(otherDeletion){
-        res.status(200).json(otherDeletion);
+        res.redirect(200, '/');
         return;
     } else {
         res.status(404).json({message:"Friendship does not exist to be deleted"});
@@ -161,5 +161,6 @@ router.delete('/incoming', async (req, res) => {
       return;
     }
 })
+
 
 module.exports = router;
