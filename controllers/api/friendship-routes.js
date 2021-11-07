@@ -88,8 +88,7 @@ try{
       })
       if(existingFriendship){
         console.log("Friendship already exists");
-        res.status(200).json("I don't have that");
-        return;
+        res.status("Friendship already exists");
       }
     }
     catch(err){
