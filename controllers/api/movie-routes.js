@@ -7,7 +7,6 @@ router.post('/', async (req, res) => {
     const dbMovieData = await Movie.create({
       title: req.body.title,
       runtime: req.body.runtime,
-      rating: req.body.rating,
       showtime: req.body.showtime,
       user_id: req.session.user_id
     });
