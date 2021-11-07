@@ -81,6 +81,7 @@ try{
     });
     if(newFriend.id === req.session.user_id){
       res.status(500).json({message: "Cannot send friendship request to yourself"});
+      return;
     }
     //Check to see if friendship already exists
     try{
@@ -117,7 +118,8 @@ try{
       loggedIn = true;
       user_id = req.session.user_id;
     });
-    res.status(200);
+    res.status(200).json({message:"Friend request sent"});
+    return;
 }
 catch (err){
     res.status(500).json(err);
