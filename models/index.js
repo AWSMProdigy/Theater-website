@@ -1,6 +1,7 @@
 const Friend = require('./Friend');
 const User = require('./User');
 const Movie = require('./Movie');
+const movieToShow = require('./movieToShow')
 
 const UserFriends = require('./UserFriends');
 
@@ -36,5 +37,6 @@ module.exports = {
   Friend,
   User,
   UserFriends,
-  Movie
+  Movie,
+  movieToShow
 };
