@@ -111,10 +111,11 @@ router.get('/profile', async (req, res) => {
         res.status(404).json({ message: 'No User found with this id!' });
         return;
       }
+      const myUser = userData.get({ plain: true });
       res.render('friend-profile', {
         loggedIn: req.session.loggedIn,
         user_id: req.session.user_id, 
-        userData
+        myUser
       });
     }
     catch (err) {
