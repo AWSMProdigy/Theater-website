@@ -1,9 +1,8 @@
 <div class="card col-3 mx-1 border-0" style="width: 18rem;">
-    {{!-- Please put a tag over image :) --}}
-    <img src="/img/movies-images/{{img}}" class="card-img-top" alt="...">
-    <div id="movie" data-title:"{{title}}" data-runtime="{{runtime}}" data-showtime="{{showtime}}" data-rating="{{rating}}" class="card-body custom-card">
-        <h5 class="card-title">{{title}}</h5>
-        <p class="card-text"><b>{{runtime}} | {{rating}}</b> <br> Next Showing: <br> {{showtime}}</p>
+    <img src="/img/movies-images/{{dataValues.img}}" class="card-img-top" alt="...">
+    <div id="movie" data-title:"{{dataValues.title}}" data-runtime="{{dataValues.runtime}}" data-showtime="{{dataValues.showtime}}" data-rating="{{dataValues.rating}}" class="card-body custom-card">
+        <h5 class="card-title">{{dataValues.title}}</h5>
+        <p class="card-text"><b>{{dataValues.runtime}} | {{dataValues.rating}}</b> <br> Next Showing: <br> {{dataValues.showtime}}</p>
         <button id="getTicket" class="btn text-white bg-black">Get Tickets</button>
     </div>
 </div>

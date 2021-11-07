@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
 //Sends user to movies
 router.get('/movies', async (req, res) => {
   try{
-    const movieData = movieToShow.findAll();
+    const movieData = await movieToShow.findAll();
     if(req.session.user_id){
       const myUser = await User.findByPk(req.session.user_id);
       res.render('movies', {
