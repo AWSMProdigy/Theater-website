@@ -79,6 +79,9 @@ try{
         username: req.body.username
       }
     });
+    if(newFriend.id === req.session.user_id){
+      res.status(500).json({message: "Cannot send friendship request to yourself"});
+    }
     //Check to see if friendship already exists
     try{
       const existingFriendship = await UserFriends.findOne({
@@ -88,7 +91,8 @@ try{
       })
       if(existingFriendship){
         console.log("Friendship already exists");
-        res.status("Friendship already exists");
+        res.status(500).json({message:"Friendship already exists"});
+        return;
       }
     }
     catch(err){
@@ -96,7 +100,7 @@ try{
     }
     //Check to see that user exists
     if(!newFriend){
-    res.status(404).json({ message: "No friend found" });
+      res.status(404).json({ message: "No friend found" });
     }
     const newFriendship = await UserFriends.create({
         user_id: someUser_id,
@@ -108,7 +112,6 @@ try{
       loggedIn = true;
       user_id = req.session.user_id;
     });
-    alert("Friend request sent");
     res.status(200);
 }
 catch (err){
