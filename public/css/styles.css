@@ -34,12 +34,16 @@ html,body
     font-weight: bolder;
 }
 
+.logout {
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+
 h1 {
     margin-left: 0;
     margin-bottom: 20px;
 }
-
-
 
 .carousel-item {
     overflow: hidden;
