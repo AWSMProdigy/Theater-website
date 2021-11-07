@@ -23,6 +23,28 @@ router.get('/', async (req, res) => {
     }
 })
 
+//Sends user to movies
+router.get('/movies', async (req, res) => {
+  try{
+    if(req.session.user_id){
+      const myUser = await User.findByPk(req.session.user_id);
+      res.render('movies', {
+          loggedIn: req.session.loggedIn,
+          user_id: req.session.user_id,
+          userName: myUser.username
+      });
+    } else {
+      res.render('movies', {
+        loggedIn: false,
+    });
+    }
+  }
+  catch(err) {
+      console.log(err);
+      res.status(500).json(err);
+  }
+});
+
 //Sends user to login
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect to the homepage
