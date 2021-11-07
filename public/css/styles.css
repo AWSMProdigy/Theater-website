@@ -9,6 +9,11 @@ html,body
     background-color: rgb(24, 24, 24);
 }
 
+.custom-card {
+    padding: 0px;
+    margin-top: 20px;
+}
+
 #nav-logo {
     width: 50px;
     height: 50px;
@@ -16,7 +21,7 @@ html,body
 
 .nav .nav-item .nav-link {
     color: white;
-    margin-top: 4px;
+    margin-top: 12px;
 }
 
 .nav .nav-item .nav-link:hover {
@@ -28,6 +33,13 @@ html,body
     color: #44B4FF;
     font-weight: bolder;
 }
+
+h1 {
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+
 
 .carousel-item {
     overflow: hidden;
@@ -62,6 +74,13 @@ html,body
 
 .custom-links > li > a:hover {
     color: #348ac4;
+}
+
+footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 @media (max-width: 400px) {

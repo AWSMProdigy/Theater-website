@@ -18,13 +18,10 @@
 </head>
 <body>
   <nav class="nav bg-black p-3 justify-content-between">
-            <img id="nav-logo" src="/img/logo-black.png">
+            <a class="nav-link" href="/"><img id="nav-logo" src="/img/logo-black.png"></a>
             <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="/">Home page</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Movies</a>
+                  <a class="nav-link" href="/movies">Movies</a>
                 </li>
                  {{#if loggedIn}}
                  <li class="nav-item">
