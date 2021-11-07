@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {  User, Friend, UserFriends, Movie } = require('../models');
+const movieToShow = require('../models/movieToShow');
 
 //Sends user to homepage
 router.get('/', async (req, res) => {
@@ -26,16 +27,19 @@ router.get('/', async (req, res) => {
 //Sends user to movies
 router.get('/movies', async (req, res) => {
   try{
+    const movieData = movieToShow.findAll();
     if(req.session.user_id){
       const myUser = await User.findByPk(req.session.user_id);
       res.render('movies', {
           loggedIn: req.session.loggedIn,
           user_id: req.session.user_id,
-          userName: myUser.username
+          userName: myUser.username,
+          movieData
       });
     } else {
       res.render('movies', {
         loggedIn: false,
+        movieData
     });
     }
   }
