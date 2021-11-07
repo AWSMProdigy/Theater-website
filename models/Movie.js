@@ -26,6 +26,14 @@ Movie.init(
       type: DataTypes.DATETIME,
       allowNull: false,
     },
+    user_id: {
+      type:DataTypes.INTEGER,
+      references: {
+        model: "User",
+        key: "id",
+        unique: false
+      }
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
