@@ -8,7 +8,8 @@ router.post('/', async (req, res) => {
       title: req.body.title,
       runtime: req.body.runtime,
       showtime: req.body.showtime,
-      user_id: req.session.user_id
+      user_id: req.session.user_id,
+      rating: req.body.rating
     });
     if(dbMovieData){
       res.status(200).json(dbMovieData);

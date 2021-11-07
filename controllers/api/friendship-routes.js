@@ -74,16 +74,31 @@ router.put('/', async (req, res) => {
 router.post('/', async (req, res) => {
 try{
     const someUser_id = req.session.user_id;
-    //Check to see that user exists
     const newFriend = await User.findOne({
       where: {
         username: req.body.username
       }
     });
+    //Check to see if friendship already exists
+    try{
+      const existingFriendship = await UserFriends.findOne({
+        where: {
+            user_id: someUser_id, friend_id: newFriend.id,        
+        }
+      })
+      if(existingFriendship){
+        console.log("Friendship already exists");
+        res.status(200).json("I don't have that");
+        return;
+      }
+    }
+    catch(err){
+      console.log("Existing friendship not found");
+    }
+    //Check to see that user exists
     if(!newFriend){
     res.status(404).json({ message: "No friend found" });
     }
-    console.log(newFriend.id + "------------------------");
     const newFriendship = await UserFriends.create({
         user_id: someUser_id,
         friend_id: newFriend.id,
@@ -94,7 +109,8 @@ try{
       loggedIn = true;
       user_id = req.session.user_id;
     });
-    res.redirect(200, '/');
+    alert("Friend request sent");
+    res.status(200);
 }
 catch (err){
     res.status(500).json(err);

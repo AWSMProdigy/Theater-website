@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {  User, Friend, UserFriends } = require('../models');
+const {  User, Friend, UserFriends, Movie } = require('../models');
 
 //Sends user to homepage
 router.get('/', async (req, res) => {
@@ -52,7 +52,9 @@ router.get('/profile', async (req, res) => {
             status: 2
           }
         }, as: 'list_friends'
-        }],
+        },
+        { model: Movie, as: "movies" }
+      ],
       });
 
       const pendingData = await User.findByPk(req.session.user_id, {

@@ -9,11 +9,9 @@ const addFriendHandler = async (event) => {
             body: JSON.stringify({ username }),
             headers: { 'Content-Type': 'application/json' },
         });
+        alert(response.body);
         if(!response.ok){
             alert("Failed to send friend request");
-        }
-        else{
-            alert("Friend request sent");
         }
     }
     else {

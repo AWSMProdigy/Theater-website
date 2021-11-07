@@ -49,9 +49,6 @@
                                 {{/each}}
                         </div>
 
-
-
-
                         </ul>
                     </div>
                 </div>
@@ -61,6 +58,11 @@
                     <input class="form-input" type="text" id="addFriend-input" />
                     <button class="btn btn-primary" type="submit">Add Friend</button>
                 </form>
+            </div>
+            <div class="movies">
+                {{#each myUser.movies as |movie|}}
+                {{> profile-movies}}
+                {{/each}}
             </div>
 
 
