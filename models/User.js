@@ -35,10 +35,10 @@ User.init(
         len: [6],
       },
     },
-    myTheater: {
+    myImage: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: "ReelCinema"
+      defaultValue: "logo-black.png"
     },
   },
   {
