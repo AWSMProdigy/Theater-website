@@ -1,0 +1,86 @@
+[
+    {
+        "title": "Dune",
+        "runtime": "2 HR 35 MIN",
+        "rating": "PG13",
+        "showtime": "Nov 8, 7:00PM",
+        "img": "dune.png"
+    },
+    {
+        "title": "Last Night In Soho",
+        "runtime": "1 HR 56 MIN",
+        "rating": "R",
+        "showtime": "Nov 9, 3:00PM",
+        "img": "soho.png"
+    },
+    {
+        "title": "Eternals",
+        "runtime": "2 HR 37 MIN",
+        "rating": "PG13",
+        "showtime": "Nov 8, 5:00P",
+        "img": "eternals.png"
+    },
+    {
+        "title": "My Hero Academia: World Heroes' Mission",
+        "runtime": "1 HR 44 MIN",
+        "rating": "PG13",
+        "showtime": "Nov 9, 6:30PM",
+        "img": "myhero.png"
+    },
+    {
+        "title": "Spencer",
+        "runtime": "1 HR 51 MIN",
+        "rating": "R",
+        "showtime": "Nov 9, 1:00PM",
+        "img": "spencer.png"
+    },
+    {
+        "title": "No Time To Die",
+        "runtime": "2 HR 43 MIN",
+        "rating": "PG13",
+        "showtime": "Nov 9, 7:00PM",
+        "img": "007.png"
+    },
+    {
+        "title": "Venom: Let There Be Carnage",
+        "runtime": "1 HR 37 MIN",
+        "rating": "PG13",
+        "showtime": "Nov 8, 7:00PM",
+        "img": "venom.png"
+    },
+    {
+        "title": "Ron's Gone Wrong",
+        "runtime": "1 HR 47 MIN",
+        "rating": "PG",
+        "showtime": "Nov 9, 11:00AM",
+        "img": "ron.png"
+    },
+    {
+        "title": "The Addams Family 2",
+        "runtime": "1 HR 32 MIN",
+        "rating": "PG",
+        "showtime": "Nov 9, 10:00AM",
+        "img": "addamsfamily.png"
+    },
+    {
+        "title": "Shang Chi and the Legend of the Ten Rings",
+        "runtime": "2 HR 12 MIN",
+        "rating": "PG13",
+        "showtime": "Nov 9, 8:00PM",
+        "img": "shangchi.png"
+    },
+    {
+        "title": "Free Guy",
+        "runtime": "1 HR 55 MIN",
+        "rating": "PG13",
+        "showtime": "Nov 8, 7:30PM",
+        "img": "freeguy.png"
+    },
+    {
+        "title": "13 Minutes",
+        "runtime": "2 HR 35 MIN",
+        "rating": "PG13",
+        "showtime": "Nov 8, 2:30PM",
+        "img": "13minutes.png"
+    }
+]

@@ -13,10 +13,10 @@ var ticketHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
     })
     if(!response.ok){
-        alert("Failed to add movie");
+        alert("Failed to receieve tickets");
     }
     else{
-        alert("Movie added");
+        alert("Tickets receieved");
     }
 }
 

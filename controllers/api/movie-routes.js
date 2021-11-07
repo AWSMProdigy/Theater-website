@@ -21,24 +21,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-
-router.get('/:id', async (req, res) => {
-    try {
-      const movieData = await Movie.findByPk(req.params.id);
-  
-      if (!movieData) {
-        res.status(404).json({ message: 'No movie found with this id!' });
-        return;
-      }
-      res.status(200).json(movieData);
-    }
-    catch (err) {
-      res.status(500).json(err);
-    }
-  });
-
-      
-
 router.get('/', async (req, res) => {
   try {
     const movieData = await Movie.findAll();

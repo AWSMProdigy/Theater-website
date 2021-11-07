@@ -1,16 +1,10 @@
-<div class="carousel-item active">
-    <div class="col-lg-2">
-        <div class="movie-card m-4" id="movie" data-title="{{title}}" data-runtime="{{runtime}}" data-rating="{{rating}}" data-showtime="{{showtime}}">
-            <div class="movie-img">
-                <a href="/movie/{{title}}"><img src="/img/movie-carousel/{{img}}.png" class="img-fluid"></a>
-            </div>
-            <div class="movie-title">
-                {{#if loggedIn}}
-                <button id="getTicket" class="btn bg-black text-white">Get Tickets</button>
-                {{/if}}
-            </div>
-        </div>
+<div class="card col-3 mx-1 border-0" style="width: 18rem;">
+    {{!-- Please put a tag over image :) --}}
+    <img src="/img/movies-images/{{img}}" class="card-img-top" alt="...">
+    <div id="movie" data-title:"{{title}}" data-runtime="{{runtime}}" data-showtime="{{showtime}}" data-rating="{{rating}}" class="card-body custom-card">
+        <h5 class="card-title">{{title}}</h5>
+        <p class="card-text"><b>{{runtime}} | {{rating}}</b> <br> Next Showing: <br> {{showtime}}</p>
+        <button id="getTicket" class="btn text-white bg-black">Get Tickets</button>
     </div>
 </div>
-
 <script src="./js/getTickets.js"></script>

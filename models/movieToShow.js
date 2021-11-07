@@ -1,0 +1,43 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+class movieToShow extends Model {}
+
+movieToShow.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    runtime: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    rating: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    showtime: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    img: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+  },
+    {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'movieToShow',
+    }
+);
+
+module.exports = movieToShow;
