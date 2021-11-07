@@ -1,8 +1,9 @@
 <div class="container mt-4 mb-4">
-        <h1>Featured Movies</h1>
-        <div class="row flex-nowrap">
-            {{#each movieData as |movie|}}
-            {{> movie-details.handlebars}}
-            {{/each}}
-        </div>
+    <h1>Featured Movies</h1>
+    <div class="row flex-nowrap">
+        {{#each movieData as |movie|}}
+        {{> movie-details}}
+        {{/each}}
     </div>
+</div>
+
