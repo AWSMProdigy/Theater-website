@@ -1,5 +1,3 @@
-
-
 .signup-box{
     width: 360px;
     height: 500px;
@@ -7,6 +5,7 @@
     background-color: rgb(126, 126, 126);
     border-radius: 3px;
 }
+
 .login-box{
     width: 360px;
     height: 280;
@@ -16,16 +15,17 @@
     margin-top: 160px;
 }
 
-
 .signup-form, .login-form{
     width: 300px;
     margin-left: 20px;
 }
+
 .username-signup, .email-signup, .password-signup, .email-login, .password-login{
     display: flex;
     margin-top: 20px;
     font-size: 18px;
 }
+
 .form-input{
     width: 100%;
     padding: 7px;
@@ -34,6 +34,7 @@
     border-radius: 6px;
     outline: none;
 }
+
 .btn-login{
     width: 300px;
     height: 35px;
@@ -44,6 +45,7 @@
     font-size: 18px; 
     cursor: pointer;
 }
+
 .btn-login:hover{
     background-color:#348ac4;
 }
@@ -62,9 +64,11 @@
     font-size: 15px;
     margin-top: -70px;
 }
+
 .para-2 a{
     color: #07eeff;
 }
+
 .para-1 a{
     color:#07eeff;
 }
