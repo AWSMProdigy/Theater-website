@@ -35,20 +35,19 @@
                             <div class="m-b-10"><b>Pending friend requests</b></div>
                             <ul class="friend-list clearfix">
                                 {{#each myPending.list_friends as |friend|}}
-                                {{> friends-details}}
+                                {{> pending-details}}
                                 {{/each}}
                         </div>
 
                         <div class="tab-pane fade active show" id="profile-friends">
                             <div class="m-b-10"><b>Incoming friend requests</b></div>
                             <ul class="friend-list clearfix">
-                                {{#each myPending.list_friends as |friend|}}
-                                {{> friends-details}}
+                                {{#each incomingFriends}}
+                                    {{#dataValues}}
+                                    {{> incoming-details}}
+                                    {{/dataValues}}
                                 {{/each}}
                         </div>
-
-
-
 
                         </ul>
                     </div>
@@ -59,6 +58,11 @@
                     <input class="form-input" type="text" id="addFriend-input" />
                     <button class="btn btn-primary" type="submit">Add Friend</button>
                 </form>
+            </div>
+            <div class="movies">
+                {{#each myUser.movies as |movie|}}
+                {{> profile-movies}}
+                {{/each}}
             </div>
 
 

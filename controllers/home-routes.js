@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {  User, Friend } = require('../models');
+const {  User, Friend, UserFriends, Movie } = require('../models');
 
 //Sends user to homepage
 router.get('/', async (req, res) => {
@@ -52,7 +52,9 @@ router.get('/profile', async (req, res) => {
             status: 2
           }
         }, as: 'list_friends'
-        }],
+        },
+        { model: Movie, as: "movies" }
+      ],
       });
 
       const pendingData = await User.findByPk(req.session.user_id, {
@@ -63,18 +65,59 @@ router.get('/profile', async (req, res) => {
         }, as: 'list_friends'
         }],
       });
+
+      const incomingData = await UserFriends.findAll({
+          where:{
+            status: 1,
+            friend_id: req.session.user_id
+          }
+      });
+      
+      var incomingFriends = [];
+      for(let i=0; i < incomingData.length; i++){
+        incomingFriends.push(await User.findByPk(incomingData[i].user_id));
+      }
+
+      if (!userData) {
+        res.status(404).json({ message: 'No User found with this id!' });
+        return;
+      }
+
+      const myUser = userData.get({ plain: true });
+      const myPending = pendingData.get({ plain: true });
+
+      console.log(incomingFriends);
+
+      res.render('friends-list', {
+        loggedIn: req.session.loggedIn,
+        user_id: req.session.user_id, 
+        myUser, 
+        myPending,
+        incomingFriends
+      });
+    }
+    catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/profile/:username', async (req, res) => {
+    try {
+      const userData = await User.findOne({
+        where: {
+          username: req.params.username
+        },
+      });
+  
       if (!userData) {
         res.status(404).json({ message: 'No User found with this id!' });
         return;
       }
       const myUser = userData.get({ plain: true });
-      const myPending = pendingData.get({ plain: true });
-      console.log(myPending);
-      res.render('friends-list', {
+      res.render('friend-profile', {
         loggedIn: req.session.loggedIn,
         user_id: req.session.user_id, 
-        myUser, 
-        myPending
+        myUser
       });
     }
     catch (err) {

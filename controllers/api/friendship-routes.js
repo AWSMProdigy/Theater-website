@@ -30,30 +30,36 @@ router.get('/pending/:id', async (req, res) => {
 
 //Accept friendship
 router.put('/', async (req, res) => {
+  //Find other user to get their id
     try{
       const otherFriend = await User.findOne({
         where: {
           username: req.body.userName
         }
       })
-      const updatedFriendship = await UserFriends.update({
-          status: 2,
-          where: {
-              user_id: req.session.user_id,
-              friend_id: otherFriend.id
-          }
-      })
+      console.log("------ Other friend found ------");
+      //Use current user id with the id of the user of the incoming request to change the status and accept the friend request
+      const updatedFriendship = await UserFriends.update(
+          {status: 2},
+          {where: {
+              user_id: otherFriend.id,
+              friend_id: req.session.user_id
+          }}
+      )
+      console.log("------ Friendship updated ------");
+      //Need to find other user and create a UserFriend relationship for them
       const otherFriendship = await UserFriends.create({
-        user_id: otherFriend.id,
-        friend_id: req.session.user_id,
+        user_id: req.session.user_id,
+        friend_id: otherFriend.id,
         status: 2
       })
+      console.log("------ Other friendship created ------");
       if(updatedFriendship && otherFriendship){
         req.session.save(() => {
           loggedIn = true;
           user_id = req.session.user_id;
-          res.status(200).json(updatedFriendship, otherFriendship);
         });
+        res.redirect(200, '/');
       } else{
             res.status(404).json({message:"Friendship does not exist to be accepted"});
       }
@@ -68,16 +74,30 @@ router.put('/', async (req, res) => {
 router.post('/', async (req, res) => {
 try{
     const someUser_id = req.session.user_id;
-    //Check to see that user exists
     const newFriend = await User.findOne({
       where: {
         username: req.body.username
       }
     });
+    //Check to see if friendship already exists
+    try{
+      const existingFriendship = await UserFriends.findOne({
+        where: {
+            user_id: someUser_id, friend_id: newFriend.id,        
+        }
+      })
+      if(existingFriendship){
+        console.log("Friendship already exists");
+        res.status("Friendship already exists");
+      }
+    }
+    catch(err){
+      console.log("Existing friendship not found");
+    }
+    //Check to see that user exists
     if(!newFriend){
     res.status(404).json({ message: "No friend found" });
     }
-    console.log(newFriend.id + "------------------------");
     const newFriendship = await UserFriends.create({
         user_id: someUser_id,
         friend_id: newFriend.id,
@@ -87,8 +107,9 @@ try{
     req.session.save(() => {
       loggedIn = true;
       user_id = req.session.user_id;
-      res.status(200).json(newFriendship);
     });
+    alert("Friend request sent");
+    res.status(200);
 }
 catch (err){
     res.status(500).json(err);
@@ -96,16 +117,28 @@ catch (err){
 })
 
 
-//Delete friend
-router.delete('/', async (req, res) => {
+//Delete existing friend
+router.delete('/', async (req, res) => {  
     try{
-        const deletedFriendship = await Category.destroy({
+      const otherFriend = await User.findOne({
+        where: {
+          username: req.body.userName
+        }
+      })
+        const deletedFriendship = await UserFriends.destroy({
             where: {
-                
+                user_id: req.session.user_id,
+                friend_id: otherFriend.id
             }
         })
-        if(deletedFriendship){
-            res.status(200).json(deletedFriendship);
+        const otherDeletion = await UserFriends.destroy({
+          where: {
+              user_id: otherFriend.id,
+              friend_id: req.session.user_id
+          }
+        })
+        if(deletedFriendship && otherDeletion){
+            res.redirect(200, '/');
             return;
         } else {
             res.status(404).json({message:"Friendship does not exist to be deleted"});
@@ -116,5 +149,33 @@ router.delete('/', async (req, res) => {
         return;
       }
 })
+
+//Decline incoming friend request
+router.delete('/incoming', async (req, res) => {
+  try{
+    const otherFriend = await User.findOne({
+      where: {
+        username: req.body.userName
+      }
+    })
+    const otherDeletion = await UserFriends.destroy({
+      where: {
+          user_id: otherFriend.id,
+          friend_id: req.session.user_id
+      }
+    })
+    if(otherDeletion){
+        res.redirect(200, '/');
+        return;
+    } else {
+        res.status(404).json({message:"Friendship does not exist to be deleted"});
+        return;
+    }
+  } catch(err){
+      res.status(500).json(err);
+      return;
+    }
+})
+
 
 module.exports = router;

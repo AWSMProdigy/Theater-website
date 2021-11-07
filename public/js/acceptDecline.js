@@ -19,22 +19,22 @@ const declineHandler = async (event) => {
     event.preventDefault();
     const userName = document.querySelector("#userRequest").innerHTML;
 
-    const response = await fetch('/api/friends/', {
-        method: 'PUT',
+    const response = await fetch('/api/friends/incoming', {
+        method: 'DELETE',
         body: JSON.stringify({ userName }),
         headers: { 'Content-Type': 'application/json' },
     })
     if(!response.ok){
-        alert("Failed to send friend request");
+        alert("Failed to decline friend request");
     }
     else{
-        alert("Friend request accepted");
+        alert("Friend request declined");
     }
 }
 
 document
 .querySelector('#acceptRequestBtn')
-.addEventListener('onClick', acceptHandler);
+.addEventListener('click', acceptHandler);
 document
 .querySelector('#declineRequestBtn')
-.addEventListener('onClick', declineHandler);
+.addEventListener('click', declineHandler);

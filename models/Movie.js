@@ -15,7 +15,7 @@ Movie.init(
       allowNull: false,
     },
     runtime: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     rating: {
@@ -23,14 +23,25 @@ Movie.init(
       allowNull: false,
     },
     showtime: {
-      type: DataTypes.DATETIME,
+      type: DataTypes.STRING,
       allowNull: false,
     },
+    user_id: {
+      type:DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+        unique: false
+      }
+    },
+  },
+    {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'movie',
-  }
+    }
 );
+
 module.exports = Movie;
