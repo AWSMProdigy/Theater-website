@@ -89,7 +89,12 @@ try{
             user_id: someUser_id, friend_id: newFriend.id,        
         }
       })
-      if(existingFriendship){
+      const existingFriendship2 = await UserFriends.findOne({
+        where: {
+            user_id: newFriend.id, friend_id: someUser_id,        
+        }
+      })
+      if(existingFriendship || existingFriendship2){
         console.log("Friendship already exists");
         res.status(500).json({message:"Friendship already exists"});
         return;
