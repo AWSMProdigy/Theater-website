@@ -121,6 +121,10 @@ a:hover {
     margin-bottom: 30px;
 }
 
+.img-fluid {
+    width: 100%;
+}
+
 /* Movie Details Page */
 .title {
     font-size: 5rem;
