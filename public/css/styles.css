@@ -8,6 +8,15 @@ html, body {
     justify-content: space-between;
 }
 
+.body-wrapper {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    padding-bottom: 263px;
+}
+
 .bg-black {
     background-color: rgb(24, 24, 24);
 }
@@ -37,10 +46,6 @@ html, body {
     font-weight: bolder;
 }
 
-/* .carousel {
-    max-height: 800px;
-} */
-
 .carousel-item {
     width: 100%;
     height: 100%;
@@ -61,6 +66,13 @@ html, body {
 #myhero-img, #anniversary-img {
     min-height: 100%;
     min-width: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 263px;
 }
 
 #footer-logo {
@@ -164,7 +176,6 @@ a:hover {
 
     #myhero-section {
         text-align: center;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;

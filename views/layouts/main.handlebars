@@ -19,33 +19,36 @@
 
 </head>
 <body>
-  <nav class="nav bg-black p-3 justify-content-between">
-            <a class="nav-link" href="/"><img id="nav-logo" src="/img/logo-black.png"></a>
-            <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="/movies">Movies</a>
-                </li>
-                 {{#if loggedIn}}
-                 <li class="nav-item">
-                    <a class="nav-link" href="/profile">My Profile</a>
-                </li>
-                <li class="nav-item">
-                  <button class="nav-link logout" id="logoutBtn">Logout</button>
-                </li>
-                 {{else}}
-                <li class="nav-item">
-                  <a class="nav-link" href="/login">Login</a>
-                </li>
-                {{/if}}
-                <form class="form-inline my-2 my-lg-0" id="searchForm">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
-                    <button class="btn custom-btn my-5 my-sm-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg></button>
-                  </form>
-              </ul>
-        </nav>
-    {{{body}}}
+  <div class="body-wrapper">
+      <div class="content-wrapper">
+            <nav class="nav bg-black p-3 justify-content-between">
+                <a class="nav-link" href="/"><img id="nav-logo" src="/img/logo-black.png"></a>
+                <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/movies">Movies</a>
+                    </li>
+                    {{#if loggedIn}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <button class="nav-link logout" id="logoutBtn">Logout</button>
+                    </li>
+                    {{else}}
+                    <li class="nav-item">
+                      <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    {{/if}}
+                    <form class="form-inline my-2 my-lg-0" id="searchForm">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                        <button class="btn custom-btn my-5 my-sm-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg></button>
+                      </form>
+                  </ul>
+            </nav>
+        {{{body}}}
+      </div>
     <section class="footer">
         <div class="d-flex flex-column h-100 bg-black">
             <!-- FOOTER -->
@@ -91,5 +94,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </div>
   </body>
 </html>
