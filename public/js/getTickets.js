@@ -5,6 +5,7 @@ var ticketHandler = async (name) => {
     const showtime = movie.dataset.showtime;
     const rating = movie.dataset.rating;
 
+
     const response = await fetch('/api/movies', {
         method: "POST",
         body: JSON.stringify({ title, runtime, showtime, rating }),
