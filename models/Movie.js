@@ -34,6 +34,10 @@ Movie.init(
         unique: false
       }
     },
+    img: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   },
     {
     sequelize,
