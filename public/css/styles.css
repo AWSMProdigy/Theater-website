@@ -35,15 +35,19 @@ html,body
     font-weight: bolder;
 }
 
-.custom-btn {
+.carousel {
+    max-height: 500px;
+}
+
+.carousel-item {
+    max-height: 400px;
+}
+
+.bg-blue, .custom-color, .custom-btn {
     background-color: #44B4FF;
 }
 
-.bg-blue {
-    background-color: #44B4FF;
-}
-
-#moonlight-img, #anniversary-img {
+#myhero-img, #anniversary-img {
     min-height: 100%;
     min-width: 100%;
 }
@@ -51,10 +55,6 @@ html,body
 #footer-logo {
     width: 100px;
     height: 100px;
-}
-
-.custom-color {
-    background-color: #44B4FF;
 }
 
 .custom-links > li > a {
@@ -80,7 +80,7 @@ footer {
 }
 
 /* Movie Page */
-h1 {
+#featured {
     margin-left: 38px;
     margin-bottom: 20px;
 }
@@ -94,10 +94,6 @@ h1 {
     font-size: 5rem;
     font-weight: bold;
     margin: 0;
-}
-
-.carousel-item {
-    overflow: hidden;
 }
 
 @media (max-width: 400px) {
@@ -115,11 +111,11 @@ h1 {
     .homepage-images {
         display: none;
     }
-    #moonlight-row {
+    #myhero-row {
         text-align: center;
         justify-content: center;
     }
-    #moonlight-section {
+    #myhero-section {
         max-width: 100%;
     }
     #anniversary-section {
@@ -130,64 +126,6 @@ h1 {
         text-align: center;
         max-width: 100%;
     }
-    #carousel-row {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-/* Movie Carousel */
-@media (max-width: 768px) {
-    .carousel-inner .carousel-item > div {
-        display: none;
-    }
-    .carousel-inner .carousel-item > div:first-child {
-        display: block;
-    }
-}
-
-.carousel-control-prev-icon {
-    background-image: url()
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-    display: flex;
-}
-
-/* large - display 6 */
-@media (min-width: 992px) {
-    
-    .carousel-inner .carousel-item-right.active,
-    .carousel-inner .carousel-item-next {
-      transform: translateX(50%);
-    }
-    
-    .carousel-inner .carousel-item-left.active, 
-    .carousel-inner .carousel-item-prev {
-      transform: translateX(-50%);
-    }
-}
-
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left{ 
-  transform: translateX(0);
-}
-.movie-img {
-	height:200px;
-    width: 150px;
-    background-color: aqua;
-	object-fit: fill;
-}
-
-.movie-title {
-    margin-top: 10px;
-    border-radius: 5px;
-	height: 40px; 
-    width: 150px;
-    background-color: rgb(24, 24, 24);
-    text-align: center;
 }
 
 
