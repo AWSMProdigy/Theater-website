@@ -10,6 +10,10 @@ movieToShow.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    heroImage: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -29,6 +33,10 @@ movieToShow.init(
     img: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: false,
     }
   },
     {
