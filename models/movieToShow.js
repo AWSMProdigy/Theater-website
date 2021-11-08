@@ -13,6 +13,7 @@ movieToShow.init(
     heroImage: {
       type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: "dune-hero.jpg"
     },
     title: {
       type: DataTypes.STRING,
@@ -37,6 +38,7 @@ movieToShow.init(
     description: {
       type: DataTypes.TEXT,
       allowNull: false,
+      defaultValue: "Movie description"
     }
   },
     {

@@ -1,13 +1,13 @@
-    <img class="hero-image img-fluid" src="/img/movies-images/{{heroImage}}}.jpg">
+    <img class="hero-image img-fluid" src="/img/movies-images/{{dataValues.heroImage}}}.jpg">
     <div class="container">
         <div class="row my-5">
-            <img class="movie-poster col-5" src="/img/movies-images/{{img}}.png">
+            <img class="movie-poster col-5" src="/img/movies-images/{{dataValues.img}}.png">
             <div class="col-7">
-                <h1 class="title">{{title}}</h1>
-                <h4>{{runtime}} | {{rating}}</h4>
-                <h6>Next Showing: <b>{{showtime}}</b></h6>
+                <h1 class="title">{{dataValues.title}}</h1>
+                <h4>{{dataValues.runtime}} | {{dataValues.rating}}</h4>
+                <h6>Next Showing: <b>{{dataValues.showtime}}</b></h6>
                 <br>
-                <p>{{description}}</p>
+                <p>{{dataValues.description}}</p>
                 <li class="btn bg-black text-white mt-3">Get Tickets</li>
             </div>
         </div>
