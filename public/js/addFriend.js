@@ -2,7 +2,7 @@ const addFriendHandler = async (event) => {
     event.preventDefault();
 
     const username = document.querySelector("#addFriend-input").value.trim();
-
+    console.log(username);
     if(username){
         const response = await fetch('/api/friends/', {
             method: 'POST',
@@ -24,5 +24,5 @@ const addFriendHandler = async (event) => {
 
 
  document
- .querySelector('.addFriend-form')
+ .querySelector('#addFriend-form')
  .addEventListener('submit', addFriendHandler);
