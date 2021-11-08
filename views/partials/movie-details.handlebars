@@ -1,6 +1,5 @@
 <div class="card col-3 mx-1 border-0" style="width: 18rem;">
-    {{!-- Please put a tag over image :) --}}
-    <img src="/img/movies-images/{{img}}" class="card-img-top" alt="...">
+    <a href="/movies/{{title}}"><img src="/img/movies-images/{{img}}" class="card-img-top" alt="..."></a>
     <div id="movie" data-title:"{{title}}" data-runtime="{{runtime}}" data-showtime="{{showtime}}" data-rating="{{rating}}" class="card-body custom-card">
         <h5 class="card-title">{{title}}</h5>
         <p class="card-text"><b>{{runtime}} | {{rating}}</b> <br> Next Showing: <br> {{showtime}}</p>
