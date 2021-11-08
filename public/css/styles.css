@@ -3,6 +3,7 @@ html,body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden !important; 
+    font-family: "Montserrat", sans-serif;
 }
 
 .bg-black {
@@ -65,13 +66,18 @@ html,body {
     text-decoration: none;
 }
 
-.custom-links > p > a {
+p > a > .custom-links {
     color: #44B4FF;
+    text-decoration: none;
+}
+
+a:hover {
     text-decoration: none;
 }
 
 .custom-links > li > a:hover {
     color: #348ac4;
+    text-decoration: none;
 }
 
 footer {

@@ -6,18 +6,6 @@
                     <h3 id="profile-user">{{myUser.username}}</h3>
                 </div>
         </div>
-        <div class="col-5 ml-5">
-            <div class="">
-                    <div>
-                        <h3>Friends List</h3>
-                    </div>
-                    <ul class="friends-list">
-                        {{#each myUser.list_friends as |friend|}}
-                        {{> friends-details}}
-                        {{/each}}
-                    </ul>
-            </div>
-        </div>
     </div>
         <div class="row mx-4 mt-5">
             <h3>{{myUser.username}}'s Upcoming Showings</h3>
