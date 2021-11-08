@@ -47,6 +47,10 @@ html,body
     background-color: #44B4FF;
 }
 
+.custom-text-color {
+    color: #44B4FF;
+}
+
 #myhero-img, #anniversary-img {
     min-height: 100%;
     min-width: 100%;
@@ -114,6 +118,10 @@ footer {
 .friends-list {
     margin-left: 0;
     padding: 0;
+}
+
+#user-name {
+    list-style-type: none;
 }
 
 @media (max-width: 400px) {

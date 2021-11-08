@@ -56,7 +56,11 @@
                         <div class="col-lg-2 col-md-6">
                             <h5 class="text-white mb-3">Quick links</h5>
                             <ul class="list-unstyled text-muted custom-links">
-                                <li><a href="#">Login</a></li>
+                              {{#if loggedIn}}
+                                <li><a href="/profile">My Profile</a></li>
+                              {{else}}
+                                <li><a href="/login">Login</a></li>
+                              {{/if}}
                                 <li><a href="#">Movies</a></li>
                             </ul>
                         </div>
