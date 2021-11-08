@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const {  User, Friend, UserFriends, Movie } = require('../models');
 const movieToShow = require('../models/movieToShow');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 //Sends user to homepage
 router.get('/', async (req, res) => {
@@ -33,6 +35,27 @@ router.get('/movies', async (req, res) => {
           user_id: req.session.user_id,
           movieData
       });
+    }
+  catch(err) {
+      console.log(err);
+      res.status(500).json(err);
+  }
+});
+
+router.get('/search/:query', async (req, res) => {
+  try{
+    const movieData = await movieToShow.findAll({
+      where: {
+        title: {
+          [Op.like]: '%' + req.params.query + '%'
+        }
+      }
+    });
+    res.render('movies', {
+        loggedIn: req.session.loggedIn,
+        user_id: req.session.user_id,
+        movieData
+    });
     }
   catch(err) {
       console.log(err);
