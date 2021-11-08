@@ -175,6 +175,7 @@ router.delete('/incoming', async (req, res) => {
           friend_id: req.session.user_id
       }
     })
+    console.log("Hello");
     if(otherDeletion){
         res.redirect(200, '/');
         return;
