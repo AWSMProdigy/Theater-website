@@ -1,6 +1,6 @@
 const acceptHandler = async (event) => {
     event.preventDefault();
-    const userName = document.querySelector("#userRequest").innerHTML;
+    const userName = document.querySelector("#incoming").innerHTML;
 
     const response = await fetch('/api/friends/', {
         method: 'PUT',

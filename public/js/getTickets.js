@@ -1,11 +1,11 @@
 var ticketHandler = async (event) => {
-    event.preventDefault();
+    console.log(EventTarget);
     console.log("Get Tickets clicked");
-    const movie = document.querySelector('#movie');
-    const title = movie.dataset.title;
-    const runtime = movie.dataset.runtime;
-    const showtime = movie.dataset.showtime;
-    const rating = movie.dataset.rating
+    // const movie = event.querySelector('#movie');
+    const title = EventTarget.dataset.title;
+    const runtime = EventTarget.dataset.runtime;
+    const showtime = EventTarget.dataset.showtime;
+    const rating = EventTarget.dataset.rating
 
     const response = await fetch('/api/movies', {
         method: "POST",
@@ -20,6 +20,3 @@ var ticketHandler = async (event) => {
     }
 }
 
-document
-.querySelector('#getTicket')
-.addEventListener('click', ticketHandler);
