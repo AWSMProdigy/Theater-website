@@ -25,7 +25,7 @@
         "heroImage": "eternals-hero.jpeg",
         "runtime": "2 HR 37 MIN",
         "rating": "PG13",
-        "showtime": "Nov 8, 5:00P",
+        "showtime": "Nov 8, 5:00PM",
         "img": "eternals.png",
         "description": "Marvel Studios’ “Eternals” welcomes an exciting new team of Super Heroes to the Marvel Cinematic Universe. The epic story, spanning thousands of years, features a group of immortal heroes forced out of the shadows to reunite against mankind’s oldest enemy, The Deviants. The outstanding ensemble cast includes Richard Madden as the all-powerful Ikaris, Gemma Chan as humankind-loving Sersi, Kumail Nanjiani as cosmic-powered Kingo, Lauren Ridloff as the super-fast Makkari, Brian Tyree Henry as the intelligent inventor Phastos, Salma Hayek as the wise and spiritual leader Ajak, Lia McHugh as the eternally young, old-soul Sprite, Don Lee as the powerful Gilgamesh, Barry Keoghan as aloof loner Druig, and Angelina Jolie as the fierce warrior Thena. Kit Harington plays Dane Whitman.",
         "noSpaces": "Eternals"
@@ -63,7 +63,7 @@
     },
     {
         "title": "Venom: Let There Be Carnage",
-        "heroImage": "venmo-hero.jpg",
+        "heroImage": "venom-hero.jpg",
         "runtime": "1 HR 37 MIN",
         "rating": "PG13",
         "showtime": "Nov 8, 7:00PM",
