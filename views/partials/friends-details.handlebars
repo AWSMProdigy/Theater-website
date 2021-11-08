@@ -1,9 +1,8 @@
-<li>
-        {{!-- <div class="friend-img"><img src="assets/movie-carousel/Extra_Mascot_FULL_500x500_yay.png" alt="" /></div> --}}
-        <div class="friend-info">
-            <h4 id="userRequest">{{user}}</h4>
-            <a href="/profile/{{user}}" class="btn btn-primary" id="userRequest">View Profile</a>
-            <button id="deleteFriendBtn">Delete</button>
+<li id="user-name" class="mb-3">
+        <div class="friend-info d-flex flex-row align-items-center">
+            <h5 class="pr-2"id="userRequest">{{user}}</h5>
+            <a href="/profile/{{user}}" class="btn custom-color mx-1" id="userRequest">View Profile</a>
+            <button id="deleteFriendBtn" class="btn custom-color mx-1">Delete</button>
         </div>
 </li>
 
