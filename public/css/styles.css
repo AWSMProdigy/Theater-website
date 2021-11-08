@@ -1,9 +1,13 @@
 /* Homepage Styling */
-html,body {
+html, body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden !important; 
     font-family: "Montserrat", sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .bg-black {
