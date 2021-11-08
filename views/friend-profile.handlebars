@@ -4,7 +4,6 @@
                 <img id="profile-picture" src="/img/popcorn.jpg" class="mb-4" alt=""/>
                 <div class="profile-header-info col-7">
                     <h3 id="profile-user">{{myUser.username}}</h3>
-                    <a href="#" class="btn custom-color">Edit Profile</a>
                 </div>
         </div>
         <div class="col-5 ml-5">
@@ -18,31 +17,6 @@
                         {{/each}}
                     </ul>
             </div>
-            <div class="mt-5">
-                <h3>Pending friend requests</h3>
-                <ul class="friends-list">
-                    {{#each myPending.list_friends as |friend|}}
-                    {{> pending-details}}
-                    {{/each}}
-                </ul>
-            </div>
-            <div class="mt-5" id="profile-friends">
-                <div class="m-b-10">
-                    <h3>Incoming friend requests</h3>
-                </div>
-                <ul class="friends-list">
-                    {{#each incomingFriends}}
-                        {{#dataValues}}
-                        {{> incoming-details}}
-                        {{/dataValues}}
-                    {{/each}}
-                </ul>
-            </div>
-            <form class="mt-5">
-                    <label for="addFriend-input"><h3>Add a new friend</h3></label>
-                    <input class="form-input" type="text" id="addFriend-input" placeholder="Enter username" />
-                    <button class="btn custom-color mt-2" type="submit">Add Friend</button>
-            </form>
         </div>
     </div>
         <div class="row mx-4 mt-5">
