@@ -126,7 +126,10 @@ footer {
 /* Friend List Page */
 #profile-picture {
     max-height: 300px;
+    max-width: 300px;
     border-radius: 400px;
+    width: 100%;
+    height: auto;
 }
 
 #profile-user {
