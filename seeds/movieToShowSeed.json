@@ -1,86 +1,110 @@
 [
     {
         "title": "Dune",
+        "heroImage": "dune-hero.jpg",
         "runtime": "2 HR 35 MIN",
         "rating": "PG13",
         "showtime": "Nov 8, 7:00PM",
-        "img": "dune.png"
+        "img": "dune.png",
+        "description": "A mythic and emotionally charged hero's journey, DUNE tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, who must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence--a commodity capable of unlocking humanity's greatest potential--only those who can conquer their fear will survive."
     },
     {
         "title": "Last Night In Soho",
+        "heroImage": "soho-hero.jpg",
         "runtime": "1 HR 56 MIN",
         "rating": "R",
         "showtime": "Nov 9, 3:00PM",
-        "img": "soho.png"
+        "img": "soho.png",
+        "description": "In acclaimed director Edgar Wright’s psychological thriller, Eloise, an aspiring fashion designer, is mysteriously able to enter the 1960s where she encounters a dazzling wannabe singer, Sandie. But the glamour is not all it appears to be and the dreams of the past start to crack and splinter into something far darker."
     },
     {
         "title": "Eternals",
+        "heroImage": "eternals-hero.jpeg",
         "runtime": "2 HR 37 MIN",
         "rating": "PG13",
         "showtime": "Nov 8, 5:00P",
-        "img": "eternals.png"
+        "img": "eternals.png",
+        "description": "Marvel Studios’ “Eternals” welcomes an exciting new team of Super Heroes to the Marvel Cinematic Universe. The epic story, spanning thousands of years, features a group of immortal heroes forced out of the shadows to reunite against mankind’s oldest enemy, The Deviants. The outstanding ensemble cast includes Richard Madden as the all-powerful Ikaris, Gemma Chan as humankind-loving Sersi, Kumail Nanjiani as cosmic-powered Kingo, Lauren Ridloff as the super-fast Makkari, Brian Tyree Henry as the intelligent inventor Phastos, Salma Hayek as the wise and spiritual leader Ajak, Lia McHugh as the eternally young, old-soul Sprite, Don Lee as the powerful Gilgamesh, Barry Keoghan as aloof loner Druig, and Angelina Jolie as the fierce warrior Thena. Kit Harington plays Dane Whitman."
     },
     {
         "title": "My Hero Academia: World Heroes' Mission",
+        "heroImage": "myhero-hero.png",
         "runtime": "1 HR 44 MIN",
         "rating": "PG13",
         "showtime": "Nov 9, 6:30PM",
-        "img": "myhero.png"
+        "img": "myhero.png",
+        "description": "When a sinister organization threatens to wipe out all superhuman powers, the fate of the world is on the line. With two hours until the collapse of civilization, Deku, Bakugo, and Todoroki manage to work as a team, but there’s still one problem. Deku’s on the run for murder."
     },
     {
         "title": "Spencer",
+        "heroImage": "spencer-hero.png",
         "runtime": "1 HR 51 MIN",
         "rating": "R",
         "showtime": "Nov 9, 1:00PM",
-        "img": "spencer.png"
+        "img": "spencer.png",
+        "description": "The marriage of Princess Diana and Prince Charles has long since grown cold. Though rumors of affairs and a divorce abound, peace is ordained for the Christmas festivities at the Queen's Sandringham Estate. There's eating and drinking, shooting and hunting. Diana knows the game. But this year, things will be profoundly different. SPENCER is an imagining of what might have happened during those few fateful days."
     },
     {
         "title": "No Time To Die",
+        "heroImage": "007-hero.jpeg",
         "runtime": "2 HR 43 MIN",
         "rating": "PG13",
         "showtime": "Nov 9, 7:00PM",
-        "img": "007.png"
+        "img": "007.png",
+        "description": "In No Time To Die, Bond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious villain armed with dangerous new technology."
     },
     {
         "title": "Venom: Let There Be Carnage",
+        "heroImage": "venmo-hero.jpg",
         "runtime": "1 HR 37 MIN",
         "rating": "PG13",
         "showtime": "Nov 8, 7:00PM",
-        "img": "venom.png"
+        "img": "venom.png",
+        "description": "Tom Hardy returns to the big screen as the lethal protector Venom, one of MARVEL’s greatest and most complex characters. Directed by Andy Serkis, the film also stars Michelle Williams, Naomie Harris and Woody Harrelson, in the role of the villain Cletus Kasady/Carnage."
     },
     {
         "title": "Ron's Gone Wrong",
+        "heroImage": "ron-hero.jpeg",
         "runtime": "1 HR 47 MIN",
         "rating": "PG",
         "showtime": "Nov 9, 11:00AM",
-        "img": "ron.png"
+        "img": "ron.png",
+        "description": "20th Century Studios and Locksmith Animation’s “Ron’s Gone Wrong” is the story of Barney, a socially awkward middle-schooler and Ron, his new walking, talking, digitally-connected device, which is supposed to be his “Best Friend Out of the Box.” Ron’s hilarious malfunctions, set against the backdrop of the social media age, launch them into an action-packed journey in which boy and robot come to terms with the wonderful messiness of true friendship."
     },
     {
         "title": "The Addams Family 2",
+        "heroImage": "addamsfamily-hero.jpg",
         "runtime": "1 HR 32 MIN",
         "rating": "PG",
         "showtime": "Nov 9, 10:00AM",
-        "img": "addamsfamily.png"
+        "img": "addamsfamily.png",
+        "description": "Everyone’s favorite spooky family is back in the animated comedy sequel, The Addams Family 2. In this all new movie we find Morticia and Gomez distraught that their children are growing up, skipping family dinners, and totally consumed with “scream time.” To reclaim their bond they decide to cram Wednesday, Pugsley, Uncle Fester and the crew into their haunted camper and hit the road for one last miserable family vacation. Their adventure across America takes them out of their element and into hilarious run-ins with their iconic cousin, IT, as well as many new kooky characters. What could possibly go wrong?"
     },
     {
         "title": "Shang Chi and the Legend of the Ten Rings",
+        "heroImage": "shangchi-hero.jpeg",
         "runtime": "2 HR 12 MIN",
         "rating": "PG13",
         "showtime": "Nov 9, 8:00PM",
-        "img": "shangchi.png"
+        "img": "shangchi.png",
+        "description": "Marvel Studios’ “Shang-Chi and The Legend of The Ten Rings” stars Simu Liu as Shang-Chi, who must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization. The film also stars Tony Leung as Wenwu, Awkwafina as Shang-Chi’s friend Katy and Michelle Yeoh as Jiang Nan, as well as Fala Chen, Meng’er Zhang, Florian Munteanu and Ronny Chieng."
     },
     {
         "title": "Free Guy",
+        "heroImage": "freeguy-hero.png",
         "runtime": "1 HR 55 MIN",
         "rating": "PG13",
         "showtime": "Nov 8, 7:30PM",
-        "img": "freeguy.png"
+        "img": "freeguy.png",
+        "description": "A bank teller who discovers he is actually a background player in an open-world video game, decides to become the hero of his own story…one he rewrites himself. Now in a world where there are no limits, he is determined to be the guy who saves his world his way… before it is too late."
     },
     {
         "title": "13 Minutes",
+        "heroImage": "13minutes-hero.png",
         "runtime": "2 HR 35 MIN",
         "rating": "PG13",
         "showtime": "Nov 8, 2:30PM",
-        "img": "13minutes.png"
+        "img": "13minutes.png",
+        "description": "Residents have just 13 minutes to seek shelter before the largest tornado ravages through their small town, leaving them holding onto their loved ones and fighting for survival."
     }
 ]
