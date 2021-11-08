@@ -96,6 +96,26 @@ footer {
     margin: 0;
 }
 
+/* Friend List Page */
+#profile-picture {
+    max-height: 300px;
+    border-radius: 400px;
+}
+
+#profile-user {
+    font-size: 5rem;
+}
+
+#friend-request {
+    list-style-type: none;
+    margin: 0;
+}
+
+.friends-list {
+    margin-left: 0;
+    padding: 0;
+}
+
 @media (max-width: 400px) {
     #nav-css, #nav-css>ul {
         display: flex;
