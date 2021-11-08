@@ -18,7 +18,7 @@ const acceptHandler = async (event) => {
 
 const declineHandler = async (event) => {
     event.preventDefault();
-    const userName = document.querySelector("#userRequest").innerHTML;
+    const userName = document.querySelector("#incoming").innerHTML;
 
     const response = await fetch('/api/friends/incoming', {
         method: 'DELETE',
@@ -30,6 +30,7 @@ const declineHandler = async (event) => {
     }
     else{
         alert("Friend request declined");
+        location.reload();
     }
 }
 
