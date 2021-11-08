@@ -2,14 +2,17 @@
     <div class="container">
         <div class="row my-5">
             <img class="movie-poster col-5" src="/img/movies-images/{{movieData.dataValues.img}}">
-            <div class="col-7">
+            <div id="{{movieData.dataValues.noSpaces}}movie" data-title="{{movieData.dataValues.title}}" data-runtime="{{movieData.dataValues.runtime}}" data-showtime="{{movieData.dataValues.showtime}}" data-rating="{{movieData.dataValues.rating}}" data-img="{{movieData.dataValues.img}}" class="col-7">
                 <h1 class="title">{{movieData.dataValues.title}}</h1>
                 <h4>{{movieData.dataValues.runtime}} | {{movieData.dataValues.rating}}</h4>
                 <h6>Next Showing: <b>{{movieData.dataValues.showtime}}</b></h6>
                 <br>
                 <p>{{movieData.dataValues.description}}</p>
-                <li class="btn bg-black text-white mt-3">Get Tickets</li>
+                {{#if loggedIn}}
+                <button onclick="ticketHandler('{{movieData.dataValues.noSpaces}}')" id="getTicket" class="btn text-white bg-black">Get Tickets</button>
+                {{/if}}
             </div>
         </div>
     </div>
-    <script src="./js/getTickets.js"></script>
+
+<script src="../js/getTickets.js"></script>
