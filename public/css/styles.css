@@ -42,8 +42,12 @@ html,body
 
 /* Movie Page */
 h1 {
-    margin-left: 0;
+    margin-left: 38px;
     margin-bottom: 20px;
+}
+
+#movie {
+    margin-bottom: 30px;
 }
 
 /* Movie Details Page */
