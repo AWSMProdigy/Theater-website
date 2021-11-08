@@ -13,6 +13,7 @@ router.post('/', async (req, res) => {
       })
       if(existingMovie){
         res.status(500).json("You already own a ticket for that movie");
+        return;
       }
     }
     catch(err){
