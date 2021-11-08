@@ -12,6 +12,7 @@ const deleteHandler = async (event) => {
     }
     else{
         alert("Friendship deleted");
+        location.reload();
     }
 }
 

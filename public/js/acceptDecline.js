@@ -12,6 +12,7 @@ const acceptHandler = async (event) => {
     }
     else{
         alert("Friend request accepted");
+        location.reload();
     }
 }
 
