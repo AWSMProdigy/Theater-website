@@ -28,21 +28,12 @@ router.get('/', async (req, res) => {
 router.get('/movies', async (req, res) => {
   try{
     const movieData = await movieToShow.findAll();
-    if(req.session.user_id){
-      const myUser = await User.findByPk(req.session.user_id);
       res.render('movies', {
           loggedIn: req.session.loggedIn,
           user_id: req.session.user_id,
-          userName: myUser.username,
           movieData
       });
-    } else {
-      res.render('movies', {
-        loggedIn: false,
-        movieData
-    });
     }
-  }
   catch(err) {
       console.log(err);
       res.status(500).json(err);
