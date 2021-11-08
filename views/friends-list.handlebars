@@ -3,13 +3,13 @@
         <div class="col-5">
                 <img id="profile-picture" src="img/popcorn.jpg" class="mb-4" alt=""/>
                 <div class="profile-header-info col-7">
-                    <h3 id="profile-user">{{myUser.username}}</h3>
+                    <h4 id="profile-user">{{myUser.username}}</h4>
                 </div>
         </div>
         <div class="col-5 ml-5">
             <div class="">
                     <div>
-                        <h3>Friends List</h3>
+                        <h4>Friends List</h4>
                     </div>
                     <ul class="friends-list">
                         {{#each myUser.list_friends as |friend|}}
@@ -18,7 +18,7 @@
                     </ul>
             </div>
             <div class="mt-5">
-                <h3>Pending friend requests</h3>
+                <h4>Pending Friend Requests</h4>
                 <ul class="friends-list">
                     {{#each myPending.list_friends as |friend|}}
                     {{> pending-details}}
@@ -27,7 +27,7 @@
             </div>
             <div class="mt-5" id="profile-friends">
                 <div class="m-b-10">
-                    <h3>Incoming friend requests</h3>
+                    <h4>Incoming Friend Requests</h4>
                 </div>
                 <ul class="friends-list">
                     {{#each incomingFriends}}
@@ -37,10 +37,10 @@
                     {{/each}}
                 </ul>
             </div>
-            <form class="mt-5" id="addFriend-form">
-                    <label for="addFriend-input"><h3>Add a new friend</h3></label>
-                    <input class="form-input" type="text" id="addFriend-input" placeholder="Enter username" />
-                    <button class="btn custom-color mt-2" type="submit">Add Friend</button>
+            <form class="mt-5 align-content-center" id="addFriend-form">
+                    <label for="addFriend-input"><h4>Add a New Friend</h4></label>
+                    <input class="form-input py-1" type="text" id="addFriend-input" placeholder="Enter username" />
+                    <button class="btn custom-color" type="submit">Add Friend</button>
             </form>
         </div>
     </div>

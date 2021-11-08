@@ -10,8 +10,8 @@
         <div class="row mx-4 mt-5">
             <h3>{{myUser.username}}'s Upcoming Showings</h3>
         </div>
-        <div class="row mx-2 mt-2">
-            <div class="movies d-flex flex-row">
+        <div class="row m-2">
+            <div class="movies d-flex flex-row flex-wrap">
                     {{#each myUser.movies as |movie|}}
                     {{> profile-movies}}
                     {{/each}}
