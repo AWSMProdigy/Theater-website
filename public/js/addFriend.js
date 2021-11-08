@@ -14,6 +14,7 @@ const addFriendHandler = async (event) => {
         }
         else{
             alert("Friend request sent");
+            location.reload();
         }
     }
     else {
