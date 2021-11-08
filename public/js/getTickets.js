@@ -1,11 +1,9 @@
-var ticketHandler = async (event) => {
-    console.log(EventTarget);
-    console.log("Get Tickets clicked");
-    // const movie = event.querySelector('#movie');
-    const title = EventTarget.dataset.title;
-    const runtime = EventTarget.dataset.runtime;
-    const showtime = EventTarget.dataset.showtime;
-    const rating = EventTarget.dataset.rating
+var ticketHandler = async (name) => {
+    const movie = document.querySelector('#' + name + 'movie');
+    const title = movie.dataset.title;
+    const runtime = movie.dataset.runtime;
+    const showtime = movie.dataset.showtime;
+    const rating = movie.dataset.rating;
 
     const response = await fetch('/api/movies', {
         method: "POST",

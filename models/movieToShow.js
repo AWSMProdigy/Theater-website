@@ -39,6 +39,10 @@ movieToShow.init(
       type: DataTypes.TEXT,
       allowNull: false,
       defaultValue: "Movie description"
+    },
+    noSpaces: {
+      type: DataTypes.STRING,
+      allowNull: false,
     }
   },
     {
