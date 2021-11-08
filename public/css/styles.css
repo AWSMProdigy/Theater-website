@@ -40,9 +40,18 @@ html,body
     background-color: transparent;
 }
 
+/* Movie Page */
 h1 {
     margin-left: 0;
     margin-bottom: 20px;
+}
+
+/* Movie Details Page */
+
+.title {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 .carousel-item {
