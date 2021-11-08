@@ -2,10 +2,8 @@
 html, body {
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden !important; 
     font-family: "Montserrat", sans-serif;
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -39,12 +37,13 @@ html, body {
     font-weight: bolder;
 }
 
-.carousel {
-    max-height: 500px;
-}
+/* .carousel {
+    max-height: 800px;
+} */
 
 .carousel-item {
-    max-height: 400px;
+    width: 100%;
+    height: 100%;
 }
 
 .bg-blue, .custom-color, .custom-btn {
@@ -53,6 +52,10 @@ html, body {
 
 .custom-text-color {
     color: #44B4FF;
+}
+
+#myhero-monday {
+    overflow: hidden;
 }
 
 #myhero-img, #anniversary-img {
@@ -84,26 +87,16 @@ a:hover {
     text-decoration: none;
 }
 
-footer {
-    position: sticky;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
 .logout {
     border: none;
     text-decoration: none;
     background-color: transparent;
 }
 
-/* Login / Sign Up Pages */
-#empty-div-login {
-    min-height: 301px;
-}
-
-#empty-div-signup {
-    min-height: 215px;
+.logout:active {
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 /* Movie Page */
@@ -147,33 +140,36 @@ footer {
     padding: 0;
 }
 
-
 #user-name {
     list-style-type: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 576px) {
     #nav-css, #nav-css>ul {
         display: flex;
         flex-direction: column;
         align-items: center; 
         margin: 0;
     }
+
     #small-searchBar {
         width: 75%;
         max-height: 100px;
         margin: 0;
     }
+
     .homepage-images {
         display: none;
     }
-    #myhero-row {
-        text-align: center;
-        justify-content: center;
-    }
+
     #myhero-section {
-        max-width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
     #anniversary-section {
         display: flex;
         justify-content: center;
