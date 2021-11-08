@@ -4,6 +4,7 @@
                 <img id="profile-picture" src="img/popcorn.jpg" class="mb-4" alt=""/>
                 <div class="profile-header-info col-7">
                     <h3 id="profile-user">{{myUser.username}}</h3>
+
                     <a href="#" class="btn custom-color">Edit Profile</a>
                 </div>
         </div>
@@ -11,12 +12,14 @@
             <div class="">
                     <div>
                         <h3>Friends List</h3>
+
                     </div>
                     <ul class="friends-list">
                         {{#each myUser.list_friends as |friend|}}
                         {{> friends-details}}
                         {{/each}}
                     </ul>
+
             </div>
             <div class="mt-5">
                 <h3>Pending friend requests</h3>

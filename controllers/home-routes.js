@@ -150,7 +150,7 @@ router.get('/profile', async (req, res) => {
   router.get('/profile/:username', async (req, res) => {
     try {
       const userData = await User.findOne({
-        model: Movie, as: "movies",
+        include:[{model: Movie, as: "movies"}],
         where: {
           username: req.params.username
         },
