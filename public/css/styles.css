@@ -1,3 +1,4 @@
+/* Homepage Styling */
 html,body
 {
     margin: 0px;
@@ -32,34 +33,6 @@ html,body
 .nav .nav-item .nav-link:focus {
     color: #44B4FF;
     font-weight: bolder;
-}
-
-.logout {
-    border: none;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-/* Movie Page */
-h1 {
-    margin-left: 38px;
-    margin-bottom: 20px;
-}
-
-#movie {
-    margin-bottom: 30px;
-}
-
-/* Movie Details Page */
-
-.title {
-    font-size: 5rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-.carousel-item {
-    overflow: hidden;
 }
 
 .custom-btn {
@@ -98,6 +71,33 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+.logout {
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* Movie Page */
+h1 {
+    margin-left: 38px;
+    margin-bottom: 20px;
+}
+
+#movie {
+    margin-bottom: 30px;
+}
+
+/* Movie Details Page */
+.title {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.carousel-item {
+    overflow: hidden;
 }
 
 @media (max-width: 400px) {
