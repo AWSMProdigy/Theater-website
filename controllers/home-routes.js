@@ -42,21 +42,22 @@ router.get('/movies', async (req, res) => {
 
 router.get('/movies/:title', async (req, res) => {
   try{
-    const movieData = movieToShow.findOne({
+    const movieData = await movieToShow.findOne({
       where: {
         title: req.params.title
       }
     });
+    console.log(movieData);
     if(req.session.user_id){
       const myUser = await User.findByPk(req.session.user_id);
-      res.render('movies', {
+      res.render('movie-page', {
           loggedIn: req.session.loggedIn,
           user_id: req.session.user_id,
           userName: myUser.username,
           movieData
       });
     } else {
-      res.render('movies', {
+      res.render('movie-page', {
         loggedIn: false,
         movieData
     });
