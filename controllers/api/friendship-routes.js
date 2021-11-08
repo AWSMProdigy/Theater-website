@@ -37,6 +37,7 @@ router.put('/', async (req, res) => {
           username: req.body.userName
         }
       })
+      console.log(otherFriend.id + "-------------");
       console.log("------ Other friend found ------");
       //Use current user id with the id of the user of the incoming request to change the status and accept the friend request
       const updatedFriendship = await UserFriends.update(
