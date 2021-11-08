@@ -4,6 +4,20 @@ const { Movie, User } = require('../../models');
 // CREATE new movie
 router.post('/', async (req, res) => {
   try {
+    try{
+      const existingMovie = await Movie.findOne({
+        where: {
+          title: req.body.title,
+          user_id: req.session.user_id
+        }
+      })
+      if(existingMovie){
+        res.status(500).json("You already own a ticket for that movie");
+      }
+    }
+    catch(err){
+      
+    }
     const dbMovieData = await Movie.create({
       title: req.body.title,
       runtime: req.body.runtime,
