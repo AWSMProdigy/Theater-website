@@ -4,11 +4,12 @@ var ticketHandler = async (name) => {
     const runtime = movie.dataset.runtime;
     const showtime = movie.dataset.showtime;
     const rating = movie.dataset.rating;
+    const img = movie.dataset.img;
 
 
     const response = await fetch('/api/movies', {
         method: "POST",
-        body: JSON.stringify({ title, runtime, showtime, rating }),
+        body: JSON.stringify({ title, runtime, showtime, rating, img }),
         headers: { 'Content-Type': 'application/json' },
     })
     if(!response.ok){
