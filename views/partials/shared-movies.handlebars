@@ -1,0 +1,5 @@
+{{#each movies as |shared|}}
+    {{#ifEquals shared.title ../movie.title}}
+    <h5>{{../../username}} is also watching this!</h5>
+    {{/ifEquals}}
+{{/each}}

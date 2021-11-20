@@ -1,22 +1,2 @@
-var ticketHandler = async (name) => {
-    const movie = document.querySelector('#' + name + 'movie');
-    const title = movie.dataset.title;
-    const runtime = movie.dataset.runtime;
-    const showtime = movie.dataset.showtime;
-    const rating = movie.dataset.rating;
-    const img = movie.dataset.img;
-
-
-    const response = await fetch('/api/movies', {
-        method: "POST",
-        body: JSON.stringify({ title, runtime, showtime, rating, img }),
-        headers: { 'Content-Type': 'application/json' },
-    })
-    if(!response.ok){
-        alert("Failed to receieve tickets");
-    }
-    else{
-        alert("Tickets receieved");
-    }
-}
+var ticketHandler=async a=>{const b=document.querySelector("#"+a+"movie"),c=b.dataset.title,d=b.dataset.runtime,e=b.dataset.showtime,f=b.dataset.rating,g=b.dataset.img,h=await fetch("/api/movies",{method:"POST",body:JSON.stringify({title:c,runtime:d,showtime:e,rating:f,img:g}),headers:{"Content-Type":"application/json"}});h.ok?alert("Tickets receieved"):alert("Failed to receieve tickets")};
 
