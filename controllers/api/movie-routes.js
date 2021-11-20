@@ -37,6 +37,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//Get movies in database
 router.get('/', async (req, res) => {
   try {
     const movieData = await Movie.findAll();
@@ -52,6 +53,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//Change theater of user
 router.put('/theater', async (req, res) => {
   try {
     const updatedUser = await User.update(req.body, {

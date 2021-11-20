@@ -50,7 +50,10 @@
         <div class="row m-2">
             <div class="movies d-flex flex-row flex-wrap">
                     {{#each myUser.movies as |movie|}}
-                    {{> profile-movies}}
+                        {{> profile-movies}}
+                        {{#each ../friendMovies}}
+                            {{> shared-movies movie=movie}}
+                        {{/each}}
                     {{/each}}
             </div>
         </div>

@@ -112,9 +112,11 @@ router.get('/signup', (req, res) => {
   // Otherwise, render the 'login' template
   res.render('signup');
 });
+
 //Get user profile of current user
 router.get('/profile', async (req, res) => {
     try {
+      //Get user profile, friends, and movies being watched by user
       const userData = await User.findByPk(req.session.user_id, {
         include: [{ model: Friend, through: {
           where:{
@@ -125,7 +127,9 @@ router.get('/profile', async (req, res) => {
         { model: Movie, as: "movies" }
       ],
       });
-
+      
+      const myUser = userData.get({ plain: true });
+      //Get outgoing friend requests
       const pendingData = await User.findByPk(req.session.user_id, {
         include: [{ model: Friend, through: {
           where:{
@@ -135,6 +139,19 @@ router.get('/profile', async (req, res) => {
         }],
       });
 
+      const friendMovies = [];
+      for(let i=0; i < myUser.list_friends.length; i++){
+        let pushFriend = await User.findByPk(myUser.list_friends[i].id, {
+          include: [{model: Movie, as: "movies"}]
+        });
+        let cleanPush = pushFriend.get({ plain: true });
+        console.log(cleanPush);
+        friendMovies.push(cleanPush);
+      }
+
+      console.log(friendMovies);
+
+      //Get incoming friend requests
       const incomingData = await UserFriends.findAll({
           where:{
             status: 1,
@@ -142,6 +159,7 @@ router.get('/profile', async (req, res) => {
           }
       });
       
+      //Put incoming friends into an array with all names
       var incomingFriends = [];
       for(let i=0; i < incomingData.length; i++){
         incomingFriends.push(await User.findByPk(incomingData[i].user_id));
@@ -152,17 +170,17 @@ router.get('/profile', async (req, res) => {
         return;
       }
 
-      const myUser = userData.get({ plain: true });
+
+      
       const myPending = pendingData.get({ plain: true });
-
-      console.log(incomingFriends);
-
+      
       res.render('friends-list', {
         loggedIn: req.session.loggedIn,
         user_id: req.session.user_id, 
         myUser, 
         myPending,
-        incomingFriends
+        incomingFriends,
+        friendMovies
       });
     }
     catch (err) {
